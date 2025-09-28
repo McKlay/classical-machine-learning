@@ -1594,21 +1594,21 @@
 <p>Feature scaling transforms features to a common scale without changing their relative relationships. The two most common approaches are standardization and normalization.</p>
 <h3 id="standardization-z-score-normalization">Standardization (Z-score Normalization)<a class="headerlink" href="#standardization-z-score-normalization" title="Permanent link">&para;</a></h3>
 <p>Standardization transforms features to have zero mean and unit variance:</p>
-<p>$$x' = \frac{x - \mu}{\sigma}$$</p>
+<div class="arithmatex">\[x' = \frac{x - \mu}{\sigma}\]</div>
 <p>Where:
-- $x$ is the original feature value
-- $\mu$ is the mean of the feature
-- $\sigma$ is the standard deviation of the feature
-- $x'$ is the standardized value</p>
+- <span class="arithmatex">\(x\)</span> is the original feature value
+- <span class="arithmatex">\(\mu\)</span> is the mean of the feature
+- <span class="arithmatex">\(\sigma\)</span> is the standard deviation of the feature
+- <span class="arithmatex">\(x'\)</span> is the standardized value</p>
 <p>This results in features with mean 0 and standard deviation 1, following a standard normal distribution.</p>
 <h3 id="min-max-normalization">Min-Max Normalization<a class="headerlink" href="#min-max-normalization" title="Permanent link">&para;</a></h3>
 <p>Min-max scaling transforms features to a fixed range, typically [0, 1]:</p>
-<p>$$x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}$$</p>
+<div class="arithmatex">\[x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}\]</div>
 <p>Where:
-- $x_{\min}$ and $x_{\max}$ are the minimum and maximum values of the feature
-- $x'$ ranges from 0 to 1</p>
+- <span class="arithmatex">\(x_{\min}\)</span> and <span class="arithmatex">\(x_{\max}\)</span> are the minimum and maximum values of the feature
+- <span class="arithmatex">\(x'\)</span> ranges from 0 to 1</p>
 <p>A generalized version allows custom ranges [a, b]:</p>
-<p>$$x' = a + \frac{(x - x_{\min})(b - a)}{x_{\max} - x_{\min}}$$</p>
+<div class="arithmatex">\[x' = a + \frac{(x - x_{\min})(b - a)}{x_{\max} - x_{\min}}\]</div>
 <h3 id="when-to-use-each-method">When to Use Each Method<a class="headerlink" href="#when-to-use-each-method" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Standardization</strong>: Preferred when data follows Gaussian distribution, or when using algorithms assuming standardized inputs (SVM, linear regression with regularization)</li>
@@ -1866,7 +1866,7 @@
 <p>For a binary classification problem with class proportions p (positive) and 1-p (negative), each fold will contain approximately p<em>N/K positive samples and (1-p)</em>N/K negative samples.</p>
 <h3 id="leave-one-out-cross-validation-loocv">Leave-One-Out Cross-Validation (LOOCV)<a class="headerlink" href="#leave-one-out-cross-validation-loocv" title="Permanent link">&para;</a></h3>
 <p>A special case where K = N, providing maximum training data but computationally expensive:</p>
-<p>$$\text{LOOCV Score} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}_{-i}$$</p>
+<div class="arithmatex">\[\text{LOOCV Score} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}_{-i}\]</div>
 <p>Where Score_{-i} is the score when sample i is left out for validation.</p>
 <p>For web sources on cross-validation theory, see:
 - Scikit-learn documentation: https://scikit-learn.org/stable/modules/cross_validation.html
@@ -1956,6 +1956,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

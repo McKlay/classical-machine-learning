@@ -1583,21 +1583,21 @@
 <p>Principal Component Analysis finds orthogonal directions (principal components) that capture the maximum variance in the data. These components are linear combinations of the original features.</p>
 <h3 id="covariance-matrix">Covariance Matrix<a class="headerlink" href="#covariance-matrix" title="Permanent link">&para;</a></h3>
 <p>Given a dataset X with n samples and p features, the covariance matrix Σ is:</p>
-<p>$$\Sigma = \frac{1}{n-1} X^T X$$</p>
+<div class="arithmatex">\[\Sigma = \frac{1}{n-1} X^T X\]</div>
 <p>Where X is centered (mean-subtracted). The covariance between features i and j is:</p>
-<p>$$\sigma_{ij} = \frac{1}{n-1} \sum_{k=1}^n (x_{ki} - \bar{x}<em>i)(x</em>{kj} - \bar{x}_j)$$</p>
+<div class="arithmatex">\[\sigma_{ij} = \frac{1}{n-1} \sum_{k=1}^n (x_{ki} - \bar{x}_i)(x_{kj} - \bar{x}_j)\]</div>
 <h3 id="eigenvalue-decomposition">Eigenvalue Decomposition<a class="headerlink" href="#eigenvalue-decomposition" title="Permanent link">&para;</a></h3>
 <p>PCA solves for eigenvalues λ and eigenvectors v of the covariance matrix:</p>
-<p>$$\Sigma v = \lambda v$$</p>
+<div class="arithmatex">\[\Sigma v = \lambda v\]</div>
 <p>The eigenvalues represent the variance explained by each principal component, while eigenvectors define the directions.</p>
 <h3 id="principal-components">Principal Components<a class="headerlink" href="#principal-components" title="Permanent link">&para;</a></h3>
 <p>The first principal component is the eigenvector with the largest eigenvalue, representing the direction of maximum variance. Subsequent components are orthogonal and capture decreasing amounts of variance.</p>
 <p>The projection of data onto the first k components is:</p>
-<p>$$X_{pca} = X V_k$$</p>
+<div class="arithmatex">\[X_{pca} = X V_k\]</div>
 <p>Where V_k contains the first k eigenvectors.</p>
 <h3 id="explained-variance">Explained Variance<a class="headerlink" href="#explained-variance" title="Permanent link">&para;</a></h3>
 <p>The proportion of total variance explained by component k is:</p>
-<p>$$\frac{\lambda_k}{\sum_{i=1}^p \lambda_i}$$</p>
+<div class="arithmatex">\[\frac{\lambda_k}{\sum_{i=1}^p \lambda_i}\]</div>
 <p>The cumulative explained variance helps determine how many components to retain.</p>
 <p>For web sources on PCA mathematics:
 - Scikit-learn PCA documentation: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
@@ -1936,6 +1936,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

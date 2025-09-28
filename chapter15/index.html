@@ -1570,14 +1570,14 @@
 <li>Validation set size: N/K samples</li>
 </ul>
 <p>The cross-validation score is:</p>
-<p>$$\text{CV Score} = \frac{1}{K} \sum_{i=1}^{K} \text{Score}_i$$</p>
+<div class="arithmatex">\[\text{CV Score} = \frac{1}{K} \sum_{i=1}^{K} \text{Score}_i\]</div>
 <p>Where Score_i is the performance metric on fold i.</p>
 <h3 id="stratified-k-fold-cross-validation">Stratified K-Fold Cross-Validation<a class="headerlink" href="#stratified-k-fold-cross-validation" title="Permanent link">&para;</a></h3>
 <p>StratifiedKFold ensures that each fold maintains the same proportion of samples from each class as the original dataset. This is crucial for imbalanced datasets where random splits might create folds with very different class distributions.</p>
 <p>For a binary classification problem with class proportions p (positive) and 1-p (negative), each fold will contain approximately p<em>N/K positive samples and (1-p)</em>N/K negative samples.</p>
 <h3 id="leave-one-out-cross-validation-loocv">Leave-One-Out Cross-Validation (LOOCV)<a class="headerlink" href="#leave-one-out-cross-validation-loocv" title="Permanent link">&para;</a></h3>
 <p>A special case where K = N, providing maximum training data but computationally expensive:</p>
-<p>$$\text{LOOCV Score} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}_{-i}$$</p>
+<div class="arithmatex">\[\text{LOOCV Score} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}_{-i}\]</div>
 <p>Where Score_{-i} is the score when sample i is left out for validation.</p>
 <p>For web sources on cross-validation theory, see:
 - Scikit-learn documentation: https://scikit-learn.org/stable/modules/cross_validation.html
@@ -1932,6 +1932,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

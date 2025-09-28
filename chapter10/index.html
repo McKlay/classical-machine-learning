@@ -1314,21 +1314,21 @@
 <p>This is the essence of gradient boosting: sequentially building models where each new model corrects the errors of the previous ensemble. Unlike random forests that build trees independently, gradient boosting creates a chain of trees where each tree learns from the mistakes of its predecessors. The "gradient" part refers to using gradient descent to minimize the loss function, guiding each new tree to focus on the areas where the current ensemble performs worst.</p>
 <p>HistGradientBoostingClassifier is scikit-learn's efficient implementation that uses histogram-based algorithms for faster training on large datasets, making gradient boosting practical for real-world applications.</p>
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
-<p>Gradient boosting builds an ensemble model ( F(x) ) as a sum of weak learners (typically decision trees):</p>
-<p>[
+<p>Gradient boosting builds an ensemble model <span class="arithmatex">\( F(x) \)</span> as a sum of weak learners (typically decision trees):</p>
+<div class="arithmatex">\[
 F(x) = F_0(x) + \sum_{m=1}^M \alpha_m h_m(x)
-]</p>
-<p>Where ( F_0 ) is an initial model (often the mean for regression), ( h_m ) are the weak learners, and ( \alpha_m ) are their weights.</p>
-<p>At each iteration m, we fit a new tree ( h_m ) to the pseudo-residuals ( r_{im} ), which are the negative gradients of the loss function L with respect to the current prediction ( F_{m-1}(x_i) ):</p>
-<p>[
-r_{im} = -\left. \frac{\partial L(y_i, F(x_i))}{\partial F(x_i)} \right|<em>{F = F</em>{m-1}}
-]</p>
-<p>For squared loss in regression, this simplifies to ( r_{im} = y_i - F_{m-1}(x_i) ), the standard residuals.</p>
-<p>The tree ( h_m ) is fit to predict these residuals, and the ensemble is updated:</p>
-<p>[
+\]</div>
+<p>Where <span class="arithmatex">\( F_0 \)</span> is an initial model (often the mean for regression), <span class="arithmatex">\( h_m \)</span> are the weak learners, and <span class="arithmatex">\( \alpha_m \)</span> are their weights.</p>
+<p>At each iteration m, we fit a new tree <span class="arithmatex">\( h_m \)</span> to the pseudo-residuals <span class="arithmatex">\( r_{im} \)</span>, which are the negative gradients of the loss function L with respect to the current prediction <span class="arithmatex">\( F_{m-1}(x_i) \)</span>:</p>
+<div class="arithmatex">\[
+r_{im} = -\left. \frac{\partial L(y_i, F(x_i))}{\partial F(x_i)} \right|_{F = F_{m-1}}
+\]</div>
+<p>For squared loss in regression, this simplifies to <span class="arithmatex">\( r_{im} = y_i - F_{m-1}(x_i) \)</span>, the standard residuals.</p>
+<p>The tree <span class="arithmatex">\( h_m \)</span> is fit to predict these residuals, and the ensemble is updated:</p>
+<div class="arithmatex">\[
 F_m(x) = F_{m-1}(x) + \alpha_m h_m(x)
-]</p>
-<p>Where ( \alpha_m ) is chosen to minimize the loss, often ( \alpha_m = \arg\min_\alpha \sum_i L(y_i, F_{m-1}(x_i) + \alpha h_m(x_i)) ).</p>
+\]</div>
+<p>Where <span class="arithmatex">\( \alpha_m \)</span> is chosen to minimize the loss, often <span class="arithmatex">\( \alpha_m = \arg\min_\alpha \sum_i L(y_i, F_{m-1}(x_i) + \alpha h_m(x_i)) \)</span>.</p>
 <p>For classification, we use loss functions like logistic loss, and the gradients guide the trees to focus on misclassified examples.</p>
 <p>HistGradientBoostingClassifier uses histogram binning to speed up training: features are discretized into bins, allowing efficient computation of split candidates.</p>
 <p>Web sources for further reading:
@@ -1569,6 +1569,8 @@ F_m(x) = F_{m-1}(x) + \alpha_m h_m(x)
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

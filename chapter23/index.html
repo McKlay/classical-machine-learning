@@ -1503,9 +1503,9 @@
 <li><strong>State Storage</strong>: Saving learned parameters for prediction</li>
 </ol>
 <p>For supervised learning, the optimization often follows:</p>
-<p><strong>Given</strong>: Training data $(X, y)$ where $X \in \mathbb{R}^{n \times p}$, $y \in \mathbb{R}^n$</p>
-<p><strong>Find</strong>: Parameters $\theta$ that minimize some loss function $L(\theta)$</p>
-<p>$$\hat{\theta} = \arg\min_{\theta} L(\theta; X, y)$$</p>
+<p><strong>Given</strong>: Training data <span class="arithmatex">\((X, y)\)</span> where <span class="arithmatex">\(X \in \mathbb{R}^{n \times p}\)</span>, <span class="arithmatex">\(y \in \mathbb{R}^n\)</span></p>
+<p><strong>Find</strong>: Parameters <span class="arithmatex">\(\theta\)</span> that minimize some loss function <span class="arithmatex">\(L(\theta)\)</span></p>
+<div class="arithmatex">\[\hat{\theta} = \arg\min_{\theta} L(\theta; X, y)\]</div>
 <p>Different algorithms implement this optimization differently:
 - <strong>Closed-form solutions</strong>: Direct computation (LinearRegression)
 - <strong>Iterative optimization</strong>: Gradient descent variants (LogisticRegression, neural networks)
@@ -2031,6 +2031,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

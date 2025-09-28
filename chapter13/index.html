@@ -1586,11 +1586,11 @@
 <p>DBSCAN defines clusters based on the density of points in a region. The key concepts are:</p>
 <h3 id="core-points-and-density-reachability">Core Points and Density Reachability<a class="headerlink" href="#core-points-and-density-reachability" title="Permanent link">&para;</a></h3>
 <p>A point is a <strong>core point</strong> if it has at least <code>min_samples</code> points (including itself) within distance <code>eps</code>:</p>
-<p>$$|N_\epsilon(p)| \geq min_,samples$$</p>
-<p>Where $N_\epsilon(p)$ is the neighborhood of point p within radius ε.</p>
+<div class="arithmatex">\[|N_\epsilon(p)| \geq min_,samples\]</div>
+<p>Where <span class="arithmatex">\(N_\epsilon(p)\)</span> is the neighborhood of point p within radius ε.</p>
 <h3 id="direct-density-reachability">Direct Density Reachability<a class="headerlink" href="#direct-density-reachability" title="Permanent link">&para;</a></h3>
 <p>Point q is <strong>directly density-reachable</strong> from p if:
-1. q is within distance ε of p: $||p - q|| \leq \epsilon$
+1. q is within distance ε of p: <span class="arithmatex">\(||p - q|| \leq \epsilon\)</span>
 2. p is a core point</p>
 <h3 id="density-reachability-transitive-closure">Density Reachability (Transitive Closure)<a class="headerlink" href="#density-reachability-transitive-closure" title="Permanent link">&para;</a></h3>
 <p>Point q is <strong>density-reachable</strong> from p if there exists a chain of points p₁, p₂, ..., pₙ where:
@@ -2012,6 +2012,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

@@ -1333,10 +1333,10 @@
 <p>Bagging works by creating multiple versions of the training set through bootstrapping – sampling with replacement – and training a separate model on each. The final prediction is an average (for regression) or majority vote (for classification). This approach is particularly effective for high-variance models like decision trees, transforming them from unstable learners into reliable ensemble predictors.</p>
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
 <p>Ensemble methods combine multiple base learners to improve predictive performance. For bagging, we create B bootstrap samples from the original training set of size N:</p>
-<p>[
-D_b = { (x_i, y_i) | i \in {1, 2, \dots, N} } \text{ sampled with replacement}
-]</p>
-<p>Each base learner ( h_b ) is trained on ( D_b ), and the ensemble prediction is:</p>
+<div class="arithmatex">\[
+D_b = \{ (x_i, y_i) | i \in \{1, 2, \dots, N\} \} \text{ sampled with replacement}
+\]</div>
+<p>Each base learner <span class="arithmatex">\( h_b \)</span> is trained on <span class="arithmatex">\( D_b \)</span>, and the ensemble prediction is:</p>
 <p>For classification (majority vote):
 [
 \hat{y} = \arg\max_c \sum_{b=1}^B I(h_b(x) = c)
@@ -1345,7 +1345,7 @@ D_b = { (x_i, y_i) | i \in {1, 2, \dots, N} } \text{ sampled with replacement}
 [
 \hat{y} = \frac{1}{B} \sum_{b=1}^B h_b(x)
 ]</p>
-<p>Random Forests extend bagging by introducing feature randomness. At each split in each tree, only a random subset of m features (typically ( m = \sqrt{p} ) for classification, ( m = p/3 ) for regression, where p is total features) is considered for splitting.</p>
+<p>Random Forests extend bagging by introducing feature randomness. At each split in each tree, only a random subset of m features (typically <span class="arithmatex">\( m = \sqrt{p} \)</span> for classification, <span class="arithmatex">\( m = p/3 \)</span> for regression, where p is total features) is considered for splitting.</p>
 <p>The out-of-bag (OOB) error provides an unbiased estimate of generalization error without cross-validation. For each observation, the OOB prediction uses only trees trained on bootstrap samples that didn't include that observation.</p>
 <p>Feature importance in Random Forests can be measured by the decrease in node impurity (Gini or entropy) averaged across all trees, or by permutation importance – measuring performance drop when a feature's values are randomly shuffled.</p>
 <p>Web sources for further reading:
@@ -1589,6 +1589,8 @@ D_b = { (x_i, y_i) | i \in {1, 2, \dots, N} } \text{ sampled with replacement}
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

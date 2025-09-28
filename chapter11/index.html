@@ -1510,12 +1510,12 @@
 <p>K-means clustering aims to partition n observations into k clusters where each observation belongs to the cluster with the nearest mean (centroid).</p>
 <h3 id="the-objective-function">The Objective Function<a class="headerlink" href="#the-objective-function" title="Permanent link">&para;</a></h3>
 <p>The algorithm minimizes the within-cluster sum of squares (WCSS):</p>
-<p>$$J = \sum_{i=1}^{k} \sum_{x \in S_i} ||x - \mu_i||^2$$</p>
+<div class="arithmatex">\[J = \sum_{i=1}^{k} \sum_{x \in S_i} ||x - \mu_i||^2\]</div>
 <p>Where:
-- $k$ is the number of clusters
-- $S_i$ is the set of points in cluster i
-- $\mu_i$ is the centroid (mean) of cluster i
-- $||x - \mu_i||^2$ is the squared Euclidean distance</p>
+- <span class="arithmatex">\(k\)</span> is the number of clusters
+- <span class="arithmatex">\(S_i\)</span> is the set of points in cluster i
+- <span class="arithmatex">\(\mu_i\)</span> is the centroid (mean) of cluster i
+- <span class="arithmatex">\(||x - \mu_i||^2\)</span> is the squared Euclidean distance</p>
 <h3 id="the-algorithm">The Algorithm<a class="headerlink" href="#the-algorithm" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Initialization</strong>: Choose k initial centroids (randomly or using k-means++)</li>
@@ -1525,8 +1525,8 @@
 </ol>
 <h3 id="k-means-initialization">K-means++ Initialization<a class="headerlink" href="#k-means-initialization" title="Permanent link">&para;</a></h3>
 <p>To avoid poor initialization, k-means++ selects initial centroids with probability proportional to their squared distance from existing centroids:</p>
-<p>$$P(x) = \frac{D(x)^2}{\sum_{x'} D(x')^2}$$</p>
-<p>Where $D(x)$ is the distance to the nearest existing centroid.</p>
+<div class="arithmatex">\[P(x) = \frac{D(x)^2}{\sum_{x'} D(x')^2}\]</div>
+<p>Where <span class="arithmatex">\(D(x)\)</span> is the distance to the nearest existing centroid.</p>
 <h3 id="convergence">Convergence<a class="headerlink" href="#convergence" title="Permanent link">&para;</a></h3>
 <p>The algorithm converges when the centroids stabilize. In practice, we stop when:
 - Centroids change by less than a threshold, or
@@ -1857,6 +1857,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

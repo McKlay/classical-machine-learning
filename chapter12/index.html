@@ -1495,14 +1495,14 @@
 <h3 id="distance-metrics">Distance Metrics<a class="headerlink" href="#distance-metrics" title="Permanent link">&para;</a></h3>
 <p>The foundation of hierarchical clustering is measuring distance between clusters. Common distance metrics include:</p>
 <p><strong>Single Linkage (Minimum)</strong>: Distance between closest points in different clusters
-$$d(C_i, C_j) = \min_{x \in C_i, y \in C_j} ||x - y||$$</p>
+<span class="arithmatex">\(<span class="arithmatex">\(d(C_i, C_j) = \min_{x \in C_i, y \in C_j} ||x - y||\)</span>\)</span></p>
 <p><strong>Complete Linkage (Maximum)</strong>: Distance between farthest points in different clusters
-$$d(C_i, C_j) = \max_{x \in C_i, y \in C_j} ||x - y||$$</p>
+<span class="arithmatex">\(<span class="arithmatex">\(d(C_i, C_j) = \max_{x \in C_i, y \in C_j} ||x - y||\)</span>\)</span></p>
 <p><strong>Average Linkage</strong>: Average distance between all pairs of points
-$$d(C_i, C_j) = \frac{1}{|C_i| \cdot |C_j|} \sum_{x \in C_i} \sum_{y \in C_j} ||x - y||$$</p>
+<span class="arithmatex">\(<span class="arithmatex">\(d(C_i, C_j) = \frac{1}{|C_i| \cdot |C_j|} \sum_{x \in C_i} \sum_{y \in C_j} ||x - y||\)</span>\)</span></p>
 <p><strong>Centroid Linkage</strong>: Distance between cluster centroids
-$$d(C_i, C_j) = ||\mu_i - \mu_j||$$</p>
-<p>Where $\mu_i$ is the centroid (mean) of cluster $C_i$.</p>
+<span class="arithmatex">\(<span class="arithmatex">\(d(C_i, C_j) = ||\mu_i - \mu_j||\)</span>\)</span></p>
+<p>Where <span class="arithmatex">\(\mu_i\)</span> is the centroid (mean) of cluster <span class="arithmatex">\(C_i\)</span>.</p>
 <h3 id="the-agglomerative-algorithm">The Agglomerative Algorithm<a class="headerlink" href="#the-agglomerative-algorithm" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Start with each data point as its own cluster</li>
@@ -1839,6 +1839,8 @@ $$d(C_i, C_j) = ||\mu_i - \mu_j||$$</p>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>

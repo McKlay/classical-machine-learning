@@ -1568,8 +1568,8 @@
 <p>Imbalanced datasets require metrics that focus on the minority class performance rather than overall accuracy.</p>
 <h3 id="class-imbalance-ratio">Class Imbalance Ratio<a class="headerlink" href="#class-imbalance-ratio" title="Permanent link">&para;</a></h3>
 <p>The imbalance ratio is defined as:</p>
-<p>$$\text{Imbalance Ratio} = \frac{N_{\text{majority}}}{N_{\text{minority}}}$$</p>
-<p>Where $N_{\text{majority}}$ and $N_{\text{minority}}$ are the number of samples in each class.</p>
+<div class="arithmatex">\[\text{Imbalance Ratio} = \frac{N_{\text{majority}}}{N_{\text{minority}}}\]</div>
+<p>Where <span class="arithmatex">\(N_{\text{majority}}\)</span> and <span class="arithmatex">\(N_{\text{minority}}\)</span> are the number of samples in each class.</p>
 <h3 id="confusion-matrix-and-derived-metrics">Confusion Matrix and Derived Metrics<a class="headerlink" href="#confusion-matrix-and-derived-metrics" title="Permanent link">&para;</a></h3>
 <p>For binary classification with imbalanced data:</p>
 <table>
@@ -1595,19 +1595,19 @@
 </table>
 <p>Key metrics:</p>
 <ul>
-<li><strong>Precision</strong>: $\frac{TP}{TP + FP}$ (fraction of predicted positives that are correct)</li>
-<li><strong>Recall (Sensitivity)</strong>: $\frac{TP}{TP + FN}$ (fraction of actual positives found)</li>
-<li><strong>Specificity</strong>: $\frac{TN}{TN + FP}$ (fraction of actual negatives correctly identified)</li>
-<li><strong>F1-Score</strong>: $2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$ (harmonic mean of precision and recall)</li>
+<li><strong>Precision</strong>: <span class="arithmatex">\(\frac{TP}{TP + FP}\)</span> (fraction of predicted positives that are correct)</li>
+<li><strong>Recall (Sensitivity)</strong>: <span class="arithmatex">\(\frac{TP}{TP + FN}\)</span> (fraction of actual positives found)</li>
+<li><strong>Specificity</strong>: <span class="arithmatex">\(\frac{TN}{TN + FP}\)</span> (fraction of actual negatives correctly identified)</li>
+<li><strong>F1-Score</strong>: <span class="arithmatex">\(2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\)</span> (harmonic mean of precision and recall)</li>
 </ul>
 <h3 id="area-under-roc-curve-auc-roc">Area Under ROC Curve (AUC-ROC)<a class="headerlink" href="#area-under-roc-curve-auc-roc" title="Permanent link">&para;</a></h3>
 <p>AUC measures the model's ability to discriminate between classes across all classification thresholds:</p>
-<p>$$\text{AUC} = \int_0^1 \text{TPR}(t) \cdot (-\text{FPR}'(t)) dt$$</p>
+<div class="arithmatex">\[\text{AUC} = \int_0^1 \text{TPR}(t) \cdot (-\text{FPR}'(t)) dt\]</div>
 <p>Where TPR is True Positive Rate (Recall) and FPR is False Positive Rate.</p>
 <h3 id="class-weighting">Class Weighting<a class="headerlink" href="#class-weighting" title="Permanent link">&para;</a></h3>
 <p>In weighted loss functions, the minority class gets higher weight:</p>
-<p>$$\mathcal{L}<em>{\text{weighted}} = w_p \sum</em>{i \in P} \ell(f(x_i)) + w_n \sum_{i \in N} \ell(f(x_i))$$</p>
-<p>Where $w_p$ and $w_n$ are weights for positive and negative classes.</p>
+<div class="arithmatex">\[\mathcal{L}_{\text{weighted}} = w_p \sum_{i \in P} \ell(f(x_i)) + w_n \sum_{i \in N} \ell(f(x_i))\]</div>
+<p>Where <span class="arithmatex">\(w_p\)</span> and <span class="arithmatex">\(w_n\)</span> are weights for positive and negative classes.</p>
 <p>For web sources on imbalanced learning:
 - Scikit-learn imbalanced-learn documentation: https://imbalanced-learn.org/stable/
 - "Learning from Imbalanced Data" by He and Garcia</p>
@@ -1996,6 +1996,8 @@
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
       
     
   </body>
