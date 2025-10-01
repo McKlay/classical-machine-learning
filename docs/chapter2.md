@@ -81,7 +81,7 @@ All estimators support these methods:
 - **`transform(X)`**: Transforms data (e.g., scaling, PCA). Returns transformed data.
 - **`score(X, y)`**: Evaluates performance. Returns metric (accuracy for classifiers, R² for regressors).
 
-For full details, see: https://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html
+For full details, see: [https://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html](https://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html) 
 
 ### Pipelines
 Pipelines combine steps into a single estimator:
