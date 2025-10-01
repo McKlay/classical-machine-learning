@@ -123,7 +123,7 @@ scores = cross_val_score(model, X, y, cv=skf)
 
 `KFold`: Basic folding. `StratifiedKFold`: Maintains class proportions.
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
 
 ### Hyperparameters vs Parameters
 - Parameters: Learned (e.g., `coef_` in linear models). Accessed after `fit`.
