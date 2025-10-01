@@ -104,7 +104,7 @@ predictions = pipeline.predict(X_test)
 
 Parameters: `steps` (list of (name, estimator) tuples), `memory` (for caching), `verbose` (for logging).
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 
 ### Cross-Validation
 Robust evaluation techniques:
