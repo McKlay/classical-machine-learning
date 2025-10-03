@@ -111,7 +111,7 @@ Methods:
 - `predict_proba(X)`: Returns class probabilities (for stratified/uniform).
 - `score(X, y)`: Returns accuracy score.
 
-For full details, see: https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
+For full details, see: [https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
 
 ### Best Practices
 - Use 'most_frequent' for balanced datasets as a sanity check.
