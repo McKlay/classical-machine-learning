@@ -106,7 +106,7 @@ For regularization, use `Ridge` or `Lasso`:
 - `alpha`: float, default=1.0. Regularization strength
 - `solver`: str, default='auto'. Optimization method
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
 
 Best practices: Scale features for regularization, use cross-validation for C/alpha tuning.
 
