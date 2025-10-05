@@ -95,7 +95,7 @@ Key parameters:
 
 Methods: `fit`, `predict`, `predict_proba`, `score`
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 ### LinearRegression API
 Key parameters:
