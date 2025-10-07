@@ -70,7 +70,7 @@ Key parameters:
 
 Methods: `fit`, `predict`, `predict_proba`, `kneighbors`, `score`
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
 
 Best practices: Scale features for distance-based methods. Use odd k for binary classification to avoid ties.
 
