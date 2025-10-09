@@ -57,7 +57,7 @@ In feature space, splits create axis-aligned rectangles. The tree partitions spa
 **Regression Trees:**
 Use variance reduction: Split minimizes weighted variance of targets in children.
 
-Web sources: For entropy and Gini, see [https://en.wikipedia.org/wiki/Decision_tree_learning](https://en.wikipedia.org/wiki/Decision_tree_learning). For implementation details, https://scikit-learn.org/stable/modules/tree.html.
+Web sources: For entropy and Gini, see [https://en.wikipedia.org/wiki/Decision_tree_learning](https://en.wikipedia.org/wiki/Decision_tree_learning). For implementation details, [https://scikit-learn.org/stable/modules/tree.html](https://scikit-learn.org/stable/modules/tree.html).
 
 ---
 
