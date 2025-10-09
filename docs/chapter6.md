@@ -74,7 +74,7 @@ Key parameters:
 
 Methods: `fit`, `predict`, `predict_proba`, `score`, `feature_importances_`
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 
 Best practices: Use cross-validation for depth tuning. Visualize trees with plot_tree.
 
