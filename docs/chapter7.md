@@ -51,7 +51,7 @@ For non-linear, use kernel K(x_i, x_j) = φ(x_i)·φ(x_j), e.g., RBF: exp(-γ||x
 **Geometry:**
 Support vectors define the margin; decision boundary is hyperplane in feature space.
 
-Web sources: For SVM theory, see https://en.wikipedia.org/wiki/Support_vector_machine. For kernels, https://scikit-learn.org/stable/modules/svm.html.
+Web sources: For SVM theory, see [https://en.wikipedia.org/wiki/Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine). For kernels, https://scikit-learn.org/stable/modules/svm.html.
 
 ---
 
