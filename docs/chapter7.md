@@ -67,7 +67,7 @@ Key parameters:
 
 Methods: `fit`, `predict`, `predict_proba`, `decision_function`, `support_vectors_`
 
-See: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+See: [https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 
 Best practices: Scale features. Use 'rbf' as default kernel. Tune C and gamma via grid search.
 
