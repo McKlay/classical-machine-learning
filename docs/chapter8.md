@@ -58,7 +58,7 @@ P(x_i|c) = \frac{count(x_i, c) + \alpha}{count(c) + \alpha \cdot |V|}
 Where \( \alpha \) is the smoothing parameter and \( |V| \) is the vocabulary size.
 
 Web sources for further reading:
-- https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+- [https://en.wikipedia.org/wiki/Naive_Bayes_classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
 - https://scikit-learn.org/stable/modules/naive_bayes.html
 
 ## Implementation Guide
