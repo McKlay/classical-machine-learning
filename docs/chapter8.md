@@ -59,7 +59,7 @@ Where \( \alpha \) is the smoothing parameter and \( |V| \) is the vocabulary si
 
 Web sources for further reading:
 - [https://en.wikipedia.org/wiki/Naive_Bayes_classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
-- https://scikit-learn.org/stable/modules/naive_bayes.html
+- [https://scikit-learn.org/stable/modules/naive_bayes.html](https://scikit-learn.org/stable/modules/naive_bayes.html)
 
 ## Implementation Guide
 
