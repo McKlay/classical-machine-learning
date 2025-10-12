@@ -1608,15 +1608,18 @@
 <p>This chapter explores how to move beyond the default 0.5 threshold to make more informed classification decisions that align with business objectives and real-world constraints.</p>
 <hr />
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
-<p>The decision threshold transforms probability estimates into binary classifications. For a binary classifier with probability output P(y=1|x), the prediction is:</p>
-<p>ŷ = 1 if P(y=1|x) ≥ t, else 0</p>
-<p>Where t is the decision threshold (default t=0.5).</p>
+<p>The decision threshold transforms probability estimates into binary classifications. For a binary classifier with probability output <span class="arithmatex">\(P(y=1|x)\)</span>, the prediction is:</p>
+<div class="arithmatex">\[\hat{y} = \begin{cases} 
+1 &amp; \text{if } P(y=1|x) \geq t \\
+0 &amp; \text{otherwise}
+\end{cases}\]</div>
+<p>Where <span class="arithmatex">\(t\)</span> is the decision threshold (default <span class="arithmatex">\(t=0.5\)</span>).</p>
 <h3 id="cost-sensitive-classification">Cost-Sensitive Classification<a class="headerlink" href="#cost-sensitive-classification" title="Permanent link">&para;</a></h3>
-<p>Different misclassification errors can have different costs. Let FP_cost be the cost of false positive, FN_cost the cost of false negative. The expected cost for a prediction is:</p>
-<p>Cost = P(y=1|x) * FN_cost + (1 - P(y=1|x)) * FP_cost</p>
+<p>Different misclassification errors can have different costs. Let <span class="arithmatex">\(\text{FP}_{\text{cost}}\)</span> be the cost of false positive, <span class="arithmatex">\(\text{FN}_{\text{cost}}\)</span> the cost of false negative. The expected cost for a prediction is:</p>
+<div class="arithmatex">\[\text{Cost} = P(y=1|x) \cdot \text{FN}_{\text{cost}} + (1 - P(y=1|x)) \cdot \text{FP}_{\text{cost}}\]</div>
 <p>The optimal threshold minimizes expected cost:</p>
-<p>t* = argmin_t [P(y=1|x) * FN_cost + (1 - P(y=1|x)) * FP_cost]</p>
-<p>For equal costs, this simplifies to t* = 0.5.</p>
+<div class="arithmatex">\[t^* = \arg\min_t [P(y=1|x) \cdot \text{FN}_{\text{cost}} + (1 - P(y=1|x)) \cdot \text{FP}_{\text{cost}}]\]</div>
+<p>For equal costs, this simplifies to <span class="arithmatex">\(t^* = 0.5\)</span>.</p>
 <h3 id="threshold-and-performance-metrics">Threshold and Performance Metrics<a class="headerlink" href="#threshold-and-performance-metrics" title="Permanent link">&para;</a></h3>
 <p><strong>Precision-Recall Trade-off:</strong></p>
 <p>Precision = TP / (TP + FP)</p>

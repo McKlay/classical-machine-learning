@@ -1357,13 +1357,13 @@ Use variance reduction: Split minimizes weighted variance of targets in children
 <hr />
 <h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">&para;</a></h2>
 <h3 id="decisiontreeclassifier-api">DecisionTreeClassifier API<a class="headerlink" href="#decisiontreeclassifier-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:
-- <code>criterion</code>: str, default='gini'. 'gini' or 'entropy' for split quality
-- <code>max_depth</code>: int, default=None. Maximum tree depth
-- <code>min_samples_split</code>: int or float, default=2. Minimum samples to split
-- <code>min_samples_leaf</code>: int or float, default=1. Minimum samples per leaf
-- <code>max_features</code>: int, float or str, default=None. Features to consider for splits
-- <code>random_state</code>: int, default=None. For reproducibility</p>
+<p>Key parameters:<br />
+- <code>criterion</code>: str, default='gini'. 'gini' or 'entropy' for split quality<br />
+- <code>max_depth</code>: int, default=None. Maximum tree depth<br />
+- <code>min_samples_split</code>: int or float, default=2. Minimum samples to split<br />
+- <code>min_samples_leaf</code>: int or float, default=1. Minimum samples per leaf 
+- <code>max_features</code>: int, float or str, default=None. Features to consider for splits<br />
+- <code>random_state</code>: int, default=None. For reproducibility  </p>
 <p>Methods: <code>fit</code>, <code>predict</code>, <code>predict_proba</code>, <code>score</code>, <code>feature_importances_</code></p>
 <p>See: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html</a></p>
 <p>Best practices: Use cross-validation for depth tuning. Visualize trees with plot_tree.</p>

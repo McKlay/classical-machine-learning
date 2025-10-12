@@ -1459,45 +1459,45 @@
 <h3 id="logistic-regression">Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permanent link">&para;</a></h3>
 <p><strong>Sigmoid Function and Log-Odds:</strong>
 The sigmoid function maps any real number to (0,1):</p>
-<p>σ(z) = 1 / (1 + e^(-z))</p>
-<p>Where z = w·x + b is the linear combination of features.</p>
+<div class="arithmatex">\[\sigma(z) = \frac{1}{1 + e^{-z}}\]</div>
+<p>Where <span class="arithmatex">\(z = w \cdot x + b\)</span> is the linear combination of features.</p>
 <p>Log-odds represent the logarithm of the odds ratio:</p>
-<p>log(p/(1-p)) = w·x + b</p>
-<p>Solving for p gives the probability: p = σ(w·x + b)</p>
+<div class="arithmatex">\[\log\left(\frac{p}{1-p}\right) = w \cdot x + b\]</div>
+<p>Solving for p gives the probability: <span class="arithmatex">\(p = \sigma(w \cdot x + b)\)</span></p>
 <p><strong>Decision Boundary:</strong>
 For binary classification, predict class 1 if p &gt; 0.5, else class 0.
 Geometrically, this creates a hyperplane separating classes in feature space.</p>
 <p><strong>Derivation:</strong>
-Given data {(x_i, y_i)}, we maximize likelihood:</p>
-<p>L(w,b) = ∏ [σ(w·x_i + b)]^y_i * [1-σ(w·x_i + b)]^(1-y_i)</p>
+Given data <span class="arithmatex">\(\{(x_i, y_i)\}\)</span>, we maximize likelihood:</p>
+<div class="arithmatex">\[L(w,b) = \prod_{i=1}^n [\sigma(w \cdot x_i + b)]^{y_i} \cdot [1-\sigma(w \cdot x_i + b)]^{(1-y_i)}\]</div>
 <p>Taking log and minimizing negative log-likelihood gives the loss function optimized by gradient descent.</p>
 <h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h3>
 <p><strong>Least Squares:</strong>
 Minimize the sum of squared residuals:</p>
-<p>min_w ||y - Xw||²</p>
+<div class="arithmatex">\[\min_w \|y - Xw\|^2\]</div>
 <p><strong>Solution:</strong>
-w = (X^T X)^(-1) X^T y</p>
-<p><strong>Ridge and Lasso Regularization:</strong>
-Ridge: min_w ||y - Xw||² + α||w||²
-Lasso: min_w ||y - Xw||² + α||w||₁</p>
+<span class="arithmatex">\(<span class="arithmatex">\(w = (X^T X)^{-1} X^T y\)</span>\)</span></p>
+<p><strong>Ridge and Lasso Regularization:</strong><br />
+Ridge: <span class="arithmatex">\(<span class="arithmatex">\(\min_w \|y - Xw\|^2 + \alpha\|w\|^2\)</span>\)</span><br />
+Lasso: <span class="arithmatex">\(<span class="arithmatex">\(\min_w \|y - Xw\|^2 + \alpha\|w\|_1\)</span>\)</span></p>
 <p>Ridge shrinks coefficients, Lasso can set them to zero for feature selection.</p>
 <hr />
 <h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">&para;</a></h2>
 <h3 id="logisticregression-api">LogisticRegression API<a class="headerlink" href="#logisticregression-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:
-- <code>C</code>: float, default=1.0. Inverse regularization strength (smaller = stronger regularization)
-- <code>penalty</code>: str, default='l2'. 'l1', 'l2', 'elasticnet', or 'none'
-- <code>solver</code>: str, default='lbfgs'. Optimization algorithm ('newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga')
-- <code>multi_class</code>: str, default='auto'. 'ovr' (one-vs-rest), 'multinomial', 'auto'
-- <code>max_iter</code>: int, default=100. Maximum iterations</p>
+<p>Key parameters:<br />
+- <code>C</code>: float, default=1.0. Inverse regularization strength (smaller = stronger regularization)<br />
+- <code>penalty</code>: str, default='l2'. 'l1', 'l2', 'elasticnet', or 'none'<br />
+- <code>solver</code>: str, default='lbfgs'. Optimization algorithm ('newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga')<br />
+- <code>multi_class</code>: str, default='auto'. 'ovr' (one-vs-rest), 'multinomial', 'auto'<br />
+- <code>max_iter</code>: int, default=100. Maximum iterations  </p>
 <p>Methods: <code>fit</code>, <code>predict</code>, <code>predict_proba</code>, <code>score</code></p>
 <p>See: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html</a></p>
 <h3 id="linearregression-api">LinearRegression API<a class="headerlink" href="#linearregression-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:
-- <code>fit_intercept</code>: bool, default=True. Whether to calculate intercept
+<p>Key parameters:<br />
+- <code>fit_intercept</code>: bool, default=True. Whether to calculate intercept<br />
 - <code>normalize</code>: bool, default=False. Deprecated, use preprocessing</p>
-<p>For regularization, use <code>Ridge</code> or <code>Lasso</code>:
-- <code>alpha</code>: float, default=1.0. Regularization strength
+<p>For regularization, use <code>Ridge</code> or <code>Lasso</code>:<br />
+- <code>alpha</code>: float, default=1.0. Regularization strength<br />
 - <code>solver</code>: str, default='auto'. Optimization method</p>
 <p>See: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html</a></p>
 <p>Best practices: Scale features for regularization, use cross-validation for C/alpha tuning.</p>

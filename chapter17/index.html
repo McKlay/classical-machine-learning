@@ -1575,8 +1575,8 @@
 <p>Probability calibration addresses the mismatch between predicted probabilities and observed frequencies. For a well-calibrated classifier, if we group predictions by their predicted probability p, the fraction of positive examples in each group should be approximately p.</p>
 <h3 id="platt-scaling-sigmoid-calibration">Platt Scaling (Sigmoid Calibration)<a class="headerlink" href="#platt-scaling-sigmoid-calibration" title="Permanent link">&para;</a></h3>
 <p>Platt scaling fits a sigmoid function to the decision values or uncalibrated probabilities. The calibrated probability is:</p>
-<p>P(y=1|x) = 1 / (1 + exp(A * f(x) + B))</p>
-<p>Where f(x) is the decision function output, and A, B are learned parameters.</p>
+<div class="arithmatex">\[P(y=1|x) = \frac{1}{1 + \exp(A \cdot f(x) + B)}\]</div>
+<p>Where <span class="arithmatex">\(f(x)\)</span> is the decision function output, and A, B are learned parameters.</p>
 <p>This is equivalent to logistic regression on the decision values.</p>
 <h3 id="isotonic-regression">Isotonic Regression<a class="headerlink" href="#isotonic-regression" title="Permanent link">&para;</a></h3>
 <p>Isotonic regression is a non-parametric approach that fits a piecewise constant function to minimize the mean squared error while preserving monotonicity. It finds a function g such that:</p>

@@ -1356,11 +1356,11 @@ As dimensions increase, distances become uniform, making neighbors less meaningf
 <hr />
 <h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">&para;</a></h2>
 <h3 id="kneighborsclassifier-api">KNeighborsClassifier API<a class="headerlink" href="#kneighborsclassifier-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:
-- <code>n_neighbors</code>: int, default=5. Number of neighbors to use
-- <code>weights</code>: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)
-- <code>metric</code>: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')
-- <code>p</code>: int, default=2. Power parameter for Minkowski metric (p=2 is Euclidean)
+<p>Key parameters:<br />
+- <code>n_neighbors</code>: int, default=5. Number of neighbors to use<br />
+- <code>weights</code>: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)<br />
+- <code>metric</code>: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')<br />
+- <code>p</code>: int, default=2. Power parameter for Minkowski metric (p=2 is Euclidean)<br />
 - <code>algorithm</code>: str, default='auto'. Algorithm for neighbor search ('auto', 'ball_tree', 'kd_tree', 'brute')</p>
 <p>Methods: <code>fit</code>, <code>predict</code>, <code>predict_proba</code>, <code>kneighbors</code>, <code>score</code></p>
 <p>See: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html</a></p>

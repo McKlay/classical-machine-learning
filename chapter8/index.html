@@ -1332,26 +1332,20 @@
 <p>The "naive" part comes from the simplifying assumption that all features are conditionally independent given the class. In reality, features might correlate – "free" and "win" often appear together in spam – but this assumption often works surprisingly well in practice, especially for text classification. It's like assuming that the presence of "free" doesn't affect the probability of "win" appearing, given that it's spam.</p>
 <p>This approach is computationally efficient and requires less training data than many other algorithms. It's particularly effective for high-dimensional data like text, where the independence assumption is more plausible, and it serves as a strong baseline for classification tasks.</p>
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
-<p>Naive Bayes classifiers are rooted in Bayes' theorem, which provides a way to update our beliefs about the probability of a hypothesis given new evidence. For classification, we want to find the class <span class="arithmatex">\( c \)</span> that maximizes the posterior probability given the features <span class="arithmatex">\( \mathbf{x} = (x_1, x_2, \dots, x_d) \)</span>.</p>
+<p>Naive Bayes classifiers are rooted in Bayes' theorem, which provides a way to update our beliefs about the probability of a hypothesis given new evidence. For classification, we want to find the class <span class="arithmatex">\(c\)</span> that maximizes the posterior probability given the features <span class="arithmatex">\(\mathbf{x} = (x_1, x_2, \dots, x_d)\)</span>.</p>
 <p>The fundamental equation is:</p>
 <div class="arithmatex">\[
 P(c|\mathbf{x}) = \frac{P(\mathbf{x}|c) P(c)}{P(\mathbf{x})}
 \]</div>
-<p>Since <span class="arithmatex">\( P(\mathbf{x}) \)</span> is the same for all classes, we can focus on maximizing <span class="arithmatex">\( P(\mathbf{x}|c) P(c) \)</span>. The "naive" assumption decomposes the likelihood:</p>
-<div class="arithmatex">\[
-P(\mathbf{x}|c) = \prod_{i=1}^d P(x_i|c)
-\]</div>
+<p>Since <span class="arithmatex">\(P(\mathbf{x})\)</span> is the same for all classes, we can focus on maximizing <span class="arithmatex">\(P(\mathbf{x}|c) P(c)\)</span>. The "naive" assumption decomposes the likelihood:</p>
+<div class="arithmatex">\[P(\mathbf{x}|c) = \prod_{i=1}^d P(x_i|c)\]</div>
 <p>This assumes conditional independence of features given the class. For continuous features, we typically assume a Gaussian distribution:</p>
-<div class="arithmatex">\[
-P(x_i|c) = \frac{1}{\sqrt{2\pi\sigma_c^2}} \exp\left(-\frac{(x_i - \mu_c)^2}{2\sigma_c^2}\right)
-\]</div>
-<p>Where <span class="arithmatex">\( \mu_c \)</span> and <span class="arithmatex">\( \sigma_c^2 \)</span> are the mean and variance of feature <span class="arithmatex">\( i \)</span> for class <span class="arithmatex">\( c \)</span>, estimated from the training data.</p>
+<div class="arithmatex">\[P(x_i|c) = \frac{1}{\sqrt{2\pi\sigma_c^2}} \exp\left(-\frac{(x_i - \mu_c)^2}{2\sigma_c^2}\right)\]</div>
+<p>Where <span class="arithmatex">\(\mu_c\)</span> and <span class="arithmatex">\(\sigma_c^2\)</span> are the mean and variance of feature <span class="arithmatex">\(i\)</span> for class <span class="arithmatex">\(c\)</span>, estimated from the training data.</p>
 <p>For discrete features (like word counts in text), we use multinomial or Bernoulli distributions. The multinomial variant models word frequencies, while Bernoulli considers presence/absence.</p>
 <p>To handle zero probabilities (when a feature-class combination doesn't appear in training), we apply Laplace smoothing:</p>
-<div class="arithmatex">\[
-P(x_i|c) = \frac{count(x_i, c) + \alpha}{count(c) + \alpha \cdot |V|}
-\]</div>
-<p>Where <span class="arithmatex">\( \alpha \)</span> is the smoothing parameter and <span class="arithmatex">\( |V| \)</span> is the vocabulary size.</p>
+<div class="arithmatex">\[P(x_i|c) = \frac{\text{count}(x_i, c) + \alpha}{\text{count}(c) + \alpha \cdot |V|}\]</div>
+<p>Where <span class="arithmatex">\(\alpha\)</span> is the smoothing parameter and <span class="arithmatex">\(|V|\)</span> is the vocabulary size.</p>
 <p>Web sources for further reading:
 - <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a>
 - <a href="https://scikit-learn.org/stable/modules/naive_bayes.html">https://scikit-learn.org/stable/modules/naive_bayes.html</a></p>

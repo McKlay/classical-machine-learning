@@ -1613,11 +1613,11 @@
 <p>Consider a model with d hyperparameters, each taking values in continuous or discrete ranges. The parameter space Ω is the Cartesian product of these ranges:</p>
 <p>Ω = Ω₁ × Ω₂ × ... × Ω_d</p>
 <p>The objective is to find:</p>
-<p>θ* = argmax_θ ∈ Ω  Performance(f(θ))</p>
-<p>Where Performance is typically cross-validation score, and f(θ) is the model trained with hyperparameters θ.</p>
+<div class="arithmatex">\[\theta^* = \arg\max_{\theta \in \Omega} \text{Performance}(f(\theta))\]</div>
+<p>Where Performance is typically cross-validation score, and <span class="arithmatex">\(f(\theta)\)</span> is the model trained with hyperparameters <span class="arithmatex">\(\theta\)</span>.</p>
 <h3 id="grid-search-complexity">Grid Search Complexity<a class="headerlink" href="#grid-search-complexity" title="Permanent link">&para;</a></h3>
-<p>Grid search evaluates all combinations of parameter values. For d parameters with n_i possible values each, the total evaluations are:</p>
-<p>∏_{i=1}^d n_i</p>
+<p>Grid search evaluates all combinations of parameter values. For d parameters with <span class="arithmatex">\(n_i\)</span> possible values each, the total evaluations are:</p>
+<div class="arithmatex">\[\prod_{i=1}^d n_i\]</div>
 <p>This exponential growth makes grid search impractical for large parameter spaces.</p>
 <h3 id="random-search-efficiency">Random Search Efficiency<a class="headerlink" href="#random-search-efficiency" title="Permanent link">&para;</a></h3>
 <p>Random search samples randomly from the parameter space. Bergstra and Bengio (2012) showed that random search often outperforms grid search, especially when some parameters are more important than others.</p>
@@ -1890,8 +1890,8 @@
 - Include boundary values and reasonable defaults</p>
 <p><strong>Algorithm-Specific Guidelines:</strong></p>
 <p><strong>SVM:</strong>
-- C: [1e-3, 1e3] log scale
-- gamma: [1e-4, 1e-1] log scale for RBF kernel
+- C: <span class="arithmatex">\([10^{-3}, 10^3]\)</span> log scale
+- gamma: <span class="arithmatex">\([10^{-4}, 10^{-1}]\)</span> log scale for RBF kernel
 - Try both linear and RBF kernels</p>
 <p><strong>Random Forest:</strong>
 - n_estimators: [50, 500] - more is usually better
