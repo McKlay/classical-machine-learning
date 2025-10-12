@@ -1342,22 +1342,22 @@
 <p>Decision trees work similarly, automatically learning these questions from data. They're like flowcharts that classify or predict by following branches based on feature thresholds. Simple, visual, and powerful.</p>
 <hr />
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
-<p><strong>Entropy and Gini Impurity:</strong>
+<p><strong>Entropy and Gini Impurity:</strong><br />
 For classification, trees use impurity measures to choose splits.</p>
 <p>Entropy: H(S) = -∑ p_i log₂ p_i</p>
 <p>Gini: G(S) = 1 - ∑ p_i²</p>
 <p>Lower impurity means purer splits. Information gain = impurity before - weighted impurity after.</p>
-<p><strong>Recursive Splitting:</strong>
+<p><strong>Recursive Splitting:</strong>  <br />
 Start with root node. Choose feature and threshold that maximize information gain. Split data, repeat on children until stopping criteria (max depth, min samples).</p>
-<p><strong>Geometry:</strong>
+<p><strong>Geometry:</strong> <br />
 In feature space, splits create axis-aligned rectangles. The tree partitions space into regions, each assigned a prediction.</p>
-<p><strong>Regression Trees:</strong>
+<p><strong>Regression Trees:</strong> <br />
 Use variance reduction: Split minimizes weighted variance of targets in children.</p>
 <p>Web sources: For entropy and Gini, see <a href="https://en.wikipedia.org/wiki/Decision_tree_learning">https://en.wikipedia.org/wiki/Decision_tree_learning</a>. For implementation details, <a href="https://scikit-learn.org/stable/modules/tree.html">https://scikit-learn.org/stable/modules/tree.html</a>.</p>
 <hr />
 <h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">&para;</a></h2>
 <h3 id="decisiontreeclassifier-api">DecisionTreeClassifier API<a class="headerlink" href="#decisiontreeclassifier-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:<br />
+<p>Key parameters: 
 - <code>criterion</code>: str, default='gini'. 'gini' or 'entropy' for split quality<br />
 - <code>max_depth</code>: int, default=None. Maximum tree depth<br />
 - <code>min_samples_split</code>: int or float, default=2. Minimum samples to split<br />

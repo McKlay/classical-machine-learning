@@ -1543,7 +1543,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pipeline score: </span><span class="si">{</span><span class="n">pipeline</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Pipeline Parameters:</strong>
+<p><strong>Pipeline Parameters:</strong>  <br />
 - <code>steps</code>: List of (name, transformer/estimator) tuples
 - <code>memory</code>: Cache fitted transformers (useful for large datasets)
 - <code>verbose</code>: Print progress information</p>
@@ -1612,7 +1612,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pipeline score: </span><span class="si">{</span><span class="n">full_pipeline</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>ColumnTransformer Parameters:</strong>
+<p><strong>ColumnTransformer Parameters:</strong> <br />
 - <code>transformers</code>: List of (name, transformer, columns) tuples
 - <code>remainder</code>: What to do with unspecified columns ('drop', 'passthrough', or transformer)
 - <code>sparse_threshold</code>: Threshold for returning sparse matrices</p>
@@ -1666,7 +1666,7 @@
     <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">))</span>
 <span class="p">])</span>
 </code></pre></div>
-<p><strong>Custom Transformer Requirements:</strong>
+<p><strong>Custom Transformer Requirements:</strong>  <br />
 - Inherit from <code>BaseEstimator</code> and <code>TransformerMixin</code>
 - Implement <code>fit(X, y=None)</code> method
 - Implement <code>transform(X)</code> method
@@ -1781,7 +1781,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Key Insights from the Example:</strong>
+<p><strong>Key Insights from the Example:</strong><br />
 - ColumnTransformer handles mixed data types seamlessly
 - Pipeline ensures identical preprocessing for training and testing
 - Cross-validation provides robust performance estimates

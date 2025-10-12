@@ -1627,7 +1627,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cluster labels:&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 <span class="c1"># Output: [ 0  0  0  1  1 -1]  # -1 indicates noise</span>
 </code></pre></div>
-<p><strong>Key Parameters:</strong></p>
+<p><strong>Key Parameters:</strong> </p>
 <ul>
 <li><code>eps</code>: Maximum distance between two samples for them to be considered neighbors</li>
 <li>Default: 0.5</li>
@@ -1676,7 +1676,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of clusters: </span><span class="si">{</span><span class="n">n_clusters</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of noise points: </span><span class="si">{</span><span class="n">n_noise</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Parameter Interactions:</strong></p>
+<p><strong>Parameter Interactions:</strong> </p>
 <ul>
 <li><code>eps</code> and <code>min_samples</code> work together: smaller <code>eps</code> requires smaller <code>min_samples</code></li>
 <li>For high-dimensional data, consider larger <code>eps</code> values</li>
@@ -1837,7 +1837,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Interpreting Results:</strong></p>
+<p><strong>Interpreting Results:</strong>   </p>
 <p>The analysis demonstrates DBSCAN's strengths:
 - <strong>Blobs with noise</strong>: Successfully identifies 4 clusters while marking noise points
 - <strong>Moons</strong>: Handles non-convex shapes that K-means would struggle with
@@ -1846,45 +1846,45 @@
 <hr />
 <h2 id="expert-insights">Expert Insights<a class="headerlink" href="#expert-insights" title="Permanent link">&para;</a></h2>
 <h3 id="choosing-parameters">Choosing Parameters<a class="headerlink" href="#choosing-parameters" title="Permanent link">&para;</a></h3>
-<p><strong>eps Selection:</strong>
+<p><strong>eps Selection:</strong><br />
 - Use k-distance plot: Plot distance to k-th nearest neighbor, look for "knee"
 - Rule of thumb: Start with eps = 0.1 to 0.5 for normalized data
 - Larger eps → fewer, larger clusters
 - Smaller eps → more clusters, more noise</p>
-<p><strong>min_samples Selection:</strong>
+<p><strong>min_samples Selection:</strong><br />
 - General rule: min_samples ≥ dimensionality + 1
 - For 2D data: min_samples = 4-5
 - For higher dimensions: min_samples = 2 * dimensionality
 - Larger values → fewer core points, more conservative clustering</p>
 <h3 id="advantages-of-dbscan">Advantages of DBSCAN<a class="headerlink" href="#advantages-of-dbscan" title="Permanent link">&para;</a></h3>
-<p><strong>Strengths:</strong>
+<p><strong>Strengths:</strong><br />
 - No need to specify number of clusters (unlike K-means)
 - Handles arbitrary-shaped clusters
 - Robust to outliers and noise
 - Automatically identifies noise points
 - Deterministic results (no random initialization)</p>
-<p><strong>Limitations:</strong>
+<p><strong>Limitations:</strong>  <br />
 - Struggles with varying densities
 - Parameter selection can be tricky
 - Not suitable for high-dimensional data
 - Cannot cluster data with large density differences</p>
 <h3 id="when-to-use-dbscan">When to Use DBSCAN<a class="headerlink" href="#when-to-use-dbscan" title="Permanent link">&para;</a></h3>
-<p><strong>Ideal for:</strong>
+<p><strong>Ideal for:</strong><br />
 - Clusters of arbitrary shapes
 - Datasets with noise/outliers
 - Unknown number of clusters
 - Spatial data (geographic clustering)</p>
-<p><strong>Avoid when:</strong>
+<p><strong>Avoid when:</strong> 
 - Clusters have significantly different densities
 - High-dimensional data (&gt;10-15 dimensions)
 - Need deterministic cluster assignment for all points
 - Data has varying cluster densities</p>
 <h3 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h3>
-<p><strong>Complexity:</strong>
+<p><strong>Complexity:</strong> 
 - Average case: O(n log n) with spatial indexing
 - Worst case: O(n²) without proper indexing
 - Memory usage: O(n) for storing distance matrix</p>
-<p><strong>Scalability:</strong>
+<p><strong>Scalability:</strong>  <br />
 - Works well for datasets up to 10,000-100,000 points
 - For larger datasets, consider HDBSCAN or sampling
 - Use <code>algorithm='ball_tree'</code> or <code>algorithm='kd_tree'</code> for better performance</p>

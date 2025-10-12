@@ -1342,21 +1342,21 @@
 <p>This lazy learning approach doesn't build a model during training; it stores the data and computes predictions on-the-fly. It's like asking your neighbors for advice - simple, intuitive, and often surprisingly effective.</p>
 <hr />
 <h2 id="mathematical-development">Mathematical Development<a class="headerlink" href="#mathematical-development" title="Permanent link">&para;</a></h2>
-<p><strong>Distance Metrics (Euclidean):</strong>
+<p><strong>Distance Metrics (Euclidean):</strong> <br />
 KNN uses distance to find nearest neighbors. The most common is Euclidean distance:</p>
 <p>d(x, y) = sqrt(∑(x_i - y_i)²)</p>
 <p>For multi-dimensional data, this measures straight-line distance in feature space.</p>
-<p><strong>Voting in Feature Space:</strong>
+<p><strong>Voting in Feature Space:</strong>  <br />
 For classification: Find k nearest neighbors, predict the majority class.
 For regression: Predict the average of k nearest targets.</p>
-<p><strong>Geometry:</strong>
+<p><strong>Geometry:</strong> <br />
 In 2D feature space, KNN creates irregular decision boundaries based on local densities. Voronoi diagrams illustrate how space is partitioned by nearest neighbors.</p>
-<p><strong>Curse of Dimensionality:</strong>
+<p><strong>Curse of Dimensionality:</strong>  <br />
 As dimensions increase, distances become uniform, making neighbors less meaningful. Performance degrades in high dimensions.</p>
 <hr />
 <h2 id="implementation-guide">Implementation Guide<a class="headerlink" href="#implementation-guide" title="Permanent link">&para;</a></h2>
 <h3 id="kneighborsclassifier-api">KNeighborsClassifier API<a class="headerlink" href="#kneighborsclassifier-api" title="Permanent link">&para;</a></h3>
-<p>Key parameters:<br />
+<p>Key parameters: 
 - <code>n_neighbors</code>: int, default=5. Number of neighbors to use<br />
 - <code>weights</code>: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)<br />
 - <code>metric</code>: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')<br />

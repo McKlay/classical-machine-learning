@@ -1660,7 +1660,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best CV score: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best estimator: </span><span class="si">{</span><span class="n">grid_search</span><span class="o">.</span><span class="n">best_estimator_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Parameter Explanations:</strong></p>
+<p><strong>Parameter Explanations:</strong> </p>
 <ul>
 <li><code>param_grid</code>: Dictionary with parameter names as keys and lists of values to try</li>
 <li><code>cv</code>: Cross-validation folds (default=5)</li>
@@ -1694,7 +1694,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best parameters: </span><span class="si">{</span><span class="n">random_search</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Best CV score: </span><span class="si">{</span><span class="n">random_search</span><span class="o">.</span><span class="n">best_score_</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>RandomizedSearchCV specific parameters:</strong></p>
+<p><strong>RandomizedSearchCV specific parameters:</strong> </p>
 <ul>
 <li><code>n_iter</code>: Number of parameter settings to sample</li>
 <li><code>param_distributions</code>: Distributions to sample from (can use scipy.stats)</li>
@@ -1864,7 +1864,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Interpreting Results:</strong></p>
+<p><strong>Interpreting Results:</strong>   </p>
 <p>The examples demonstrate:
 - Grid search systematically explores all parameter combinations
 - Random search can find good solutions with fewer evaluations
@@ -1873,27 +1873,27 @@
 <hr />
 <h2 id="expert-insights">Expert Insights<a class="headerlink" href="#expert-insights" title="Permanent link">&para;</a></h2>
 <h3 id="grid-search-vs-random-search">Grid Search vs Random Search<a class="headerlink" href="#grid-search-vs-random-search" title="Permanent link">&para;</a></h3>
-<p><strong>When to use Grid Search:</strong>
+<p><strong>When to use Grid Search:</strong>  <br />
 - Small parameter spaces (≤10 parameters)
 - Understanding parameter interactions is crucial
 - Computational resources are abundant
 - Need exhaustive coverage of parameter combinations</p>
-<p><strong>When to use Random Search:</strong>
+<p><strong>When to use Random Search:</strong><br />
 - Large parameter spaces (&gt;10 parameters)
 - Some parameters are more important than others
 - Limited computational budget
 - Exploring continuous parameter ranges</p>
 <h3 id="designing-effective-search-spaces">Designing Effective Search Spaces<a class="headerlink" href="#designing-effective-search-spaces" title="Permanent link">&para;</a></h3>
-<p><strong>Parameter Scale Considerations:</strong>
+<p><strong>Parameter Scale Considerations:</strong> 
 - Use log scale for parameters spanning orders of magnitude (C, gamma)
 - Consider parameter interactions (e.g., C and gamma in SVM are related)
 - Include boundary values and reasonable defaults</p>
-<p><strong>Algorithm-Specific Guidelines:</strong></p>
-<p><strong>SVM:</strong>
+<p><strong>Algorithm-Specific Guidelines:</strong>  </p>
+<p><strong>SVM:</strong>  <br />
 - C: <span class="arithmatex">\([10^{-3}, 10^3]\)</span> log scale
 - gamma: <span class="arithmatex">\([10^{-4}, 10^{-1}]\)</span> log scale for RBF kernel
 - Try both linear and RBF kernels</p>
-<p><strong>Random Forest:</strong>
+<p><strong>Random Forest:</strong><br />
 - n_estimators: [50, 500] - more is usually better
 - max_depth: [None, 10, 20, 30] - None allows full growth
 - min_samples_split: [2, 10] - higher values prevent overfitting

@@ -1569,7 +1569,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">n_features_in_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">feature_names_in_</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Key Components of <code>fit</code>:</strong></p>
+<p><strong>Key Components of <code>fit</code>:</strong>    </p>
 <ul>
 <li><code>_validate_data()</code>: Input validation and preprocessing</li>
 <li><code>_validate_params()</code>: Parameter validation</li>
@@ -1648,7 +1648,7 @@
         <span class="n">X_scaled</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean_</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_</span>
         <span class="k">return</span> <span class="n">X_scaled</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span>
 </code></pre></div>
-<p><strong>Base Class Mixins:</strong></p>
+<p><strong>Base Class Mixins:</strong>  </p>
 <ul>
 <li><code>BaseEstimator</code>: Provides <code>get_params()</code>, <code>set_params()</code>, <code>**repr**</code></li>
 <li><code>ClassifierMixin</code>: Adds <code>score()</code> method for classification metrics</li>
@@ -1686,7 +1686,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LinearRegression MRO: </span><span class="si">{</span><span class="n">LinearRegression</span><span class="o">.</span><span class="vm">__mro__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LinearRegression attributes: </span><span class="si">{</span><span class="p">[</span><span class="n">attr</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">dir</span><span class="p">(</span><span class="n">LinearRegression</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">attr</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Navigating the Source Code:</strong></p>
+<p><strong>Navigating the Source Code:</strong> </p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Explore sklearn directory structure</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sklearn</span>
@@ -1855,7 +1855,7 @@
 <span class="n">sk_cv_results</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">sk_perceptron</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SKlearn Perceptron CV Accuracy: </span><span class="si">{</span><span class="n">sk_cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (+/- </span><span class="si">{</span><span class="n">sk_cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Key Insights:</strong>
+<p><strong>Key Insights:</strong> <br />
 - Custom estimators integrate seamlessly with scikit-learn's ecosystem
 - Following the base class patterns ensures compatibility
 - Cross-validation and other tools work automatically

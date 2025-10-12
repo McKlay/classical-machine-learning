@@ -1636,7 +1636,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Class weights:&quot;</span><span class="p">,</span> <span class="n">class_weight_dict</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>LogisticRegression class_weight parameter:</strong></p>
+<p><strong>LogisticRegression class_weight parameter:</strong>  </p>
 <ul>
 <li><code>'balanced'</code>: Automatically computes weights inversely proportional to class frequencies</li>
 <li>Dictionary: Manual weights for each class</li>
@@ -1664,7 +1664,7 @@
 <span class="n">model_smote</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">model_smote</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_smote</span><span class="p">,</span> <span class="n">y_train_smote</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>SMOTE Parameters:</strong></p>
+<p><strong>SMOTE Parameters:</strong>   </p>
 <ul>
 <li><code>k_neighbors=5</code>: Number of nearest neighbors to use for generating synthetic samples</li>
 <li><code>random_state</code>: For reproducible results</li>
@@ -1825,7 +1825,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Interpreting Results:</strong></p>
+<p><strong>Interpreting Results:</strong>   </p>
 <p>The example demonstrates:
 - Baseline model achieves high accuracy but poor fraud detection (low recall)
 - Class weighting improves recall without sacrificing too much precision
@@ -1835,22 +1835,22 @@
 <hr />
 <h2 id="expert-insights">Expert Insights<a class="headerlink" href="#expert-insights" title="Permanent link">&para;</a></h2>
 <h3 id="when-to-use-each-technique">When to Use Each Technique<a class="headerlink" href="#when-to-use-each-technique" title="Permanent link">&para;</a></h3>
-<p><strong>Class Weighting:</strong>
+<p><strong>Class Weighting:</strong>  <br />
 - Simple to implement, no data modification
 - Works with any algorithm that supports weights
 - Good for moderate imbalance
 - May not be sufficient for extreme imbalance</p>
-<p><strong>Oversampling (SMOTE):</strong>
+<p><strong>Oversampling (SMOTE):</strong> <br />
 - Creates synthetic data, preserves information
 - Effective for small datasets
 - Can introduce noise if minority class has outliers
 - Computationally intensive for large datasets</p>
-<p><strong>Undersampling:</strong>
+<p><strong>Undersampling:</strong><br />
 - Reduces training time and memory
 - Good for very large majority classes
 - Risk of losing important information
 - May not work well with small minority classes</p>
-<p><strong>Combined Approaches:</strong>
+<p><strong>Combined Approaches:</strong>  <br />
 - SMOTE + Tomek: Oversample minority, remove noisy majority samples
 - SMOTE + ENN: Oversample minority, remove noisy samples from both classes</p>
 <h3 id="choosing-evaluation-metrics">Choosing Evaluation Metrics<a class="headerlink" href="#choosing-evaluation-metrics" title="Permanent link">&para;</a></h3>
