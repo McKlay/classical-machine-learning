@@ -51,7 +51,7 @@ Feature importance in Random Forests can be measured by the decrease in node imp
 
 Web sources for further reading:
 - [https://en.wikipedia.org/wiki/Random_forest](https://en.wikipedia.org/wiki/Random_forest)
-- https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
+- [https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees](https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees)
 
 ## Implementation Guide
 
