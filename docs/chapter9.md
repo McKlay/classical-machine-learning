@@ -50,7 +50,7 @@ The out-of-bag (OOB) error provides an unbiased estimate of generalization error
 Feature importance in Random Forests can be measured by the decrease in node impurity (Gini or entropy) averaged across all trees, or by permutation importance – measuring performance drop when a feature's values are randomly shuffled.
 
 Web sources for further reading:
-- https://en.wikipedia.org/wiki/Random_forest
+- [https://en.wikipedia.org/wiki/Random_forest](https://en.wikipedia.org/wiki/Random_forest)
 - https://scikit-learn.org/stable/modules/ensemble.html#forests-of-randomized-trees
 
 ## Implementation Guide
