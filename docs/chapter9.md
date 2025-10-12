@@ -27,23 +27,17 @@ Bagging works by creating multiple versions of the training set through bootstra
 
 Ensemble methods combine multiple base learners to improve predictive performance. For bagging, we create B bootstrap samples from the original training set of size N:
 
-\[
-D_b = \{ (x_i, y_i) | i \in \{1, 2, \dots, N\} \} \text{ sampled with replacement}
-\]
+$$D_b = \{ (x_i, y_i) | i \in \{1, 2, \dots, N\} \} \text{ sampled with replacement}$$
 
 Each base learner \( h_b \) is trained on \( D_b \), and the ensemble prediction is:
 
 For classification (majority vote):
-\[
-\hat{y} = \arg\max_c \sum_{b=1}^B I(h_b(x) = c)
-\]
+$$\hat{y} = \arg\max_c \sum_{b=1}^B I(h_b(x) = c)$$
 
 For regression (average):
-\[
-\hat{y} = \frac{1}{B} \sum_{b=1}^B h_b(x)
-\]
+$$\hat{y} = \frac{1}{B} \sum_{b=1}^B h_b(x)$$
 
-Random Forests extend bagging by introducing feature randomness. At each split in each tree, only a random subset of m features (typically \( m = \sqrt{p} \) for classification, \( m = p/3 \) for regression, where p is total features) is considered for splitting.
+Random Forests extend bagging by introducing feature randomness. At each split in each tree, only a random subset of m features (typically $m = \sqrt{p}$ for classification, $m = p/3$ for regression, where p is total features) is considered for splitting.
 
 The out-of-bag (OOB) error provides an unbiased estimate of generalization error without cross-validation. For each observation, the OOB prediction uses only trees trained on bootstrap samples that didn't include that observation.
 
@@ -217,7 +211,7 @@ For model tuning:
 - Increase `n_estimators` for better performance, but watch for diminishing returns
 - Adjust `max_features` based on dataset characteristics
 
-Computational complexity is O(B × N × log N) for training, where B is number of trees and N is sample size. Prediction scales linearly with B.
+Computational complexity is $O(B \times N \times \log N)$ for training, where B is number of trees and N is sample size. Prediction scales linearly with B.
 
 Random Forests provide reliable baselines and often outperform single decision trees. They're particularly useful when you need interpretable feature importances alongside strong predictive performance.
 

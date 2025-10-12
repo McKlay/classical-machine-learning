@@ -40,13 +40,14 @@ For non-linear data, SVM uses kernels to map points to higher dimensions where s
 ## Mathematical Development
 
 **Margin Maximization:**
-For linearly separable data, SVM maximizes the margin: 2/||w||, subject to y_i(w·x_i + b) ≥ 1.
+For linearly separable data, SVM maximizes the margin: $$\frac{2}{\|w\|}$$, subject to $$y_i(w \cdot x_i + b) \geq 1$$.
 
 **Dual Formulation:**
-Using Lagrange multipliers α_i, the problem becomes max ∑α_i - 1/2 ∑α_i α_j y_i y_j (x_i·x_j), with constraints.
+Using Lagrange multipliers $\alpha_i$, the problem becomes:
+$$\max \sum_{i=1}^n \alpha_i - \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n \alpha_i \alpha_j y_i y_j (x_i \cdot x_j)$$
 
 **Kernels:**
-For non-linear, use kernel K(x_i, x_j) = φ(x_i)·φ(x_j), e.g., RBF: exp(-γ||x_i - x_j||²).
+For non-linear, use kernel $K(x_i, x_j) = \phi(x_i) \cdot \phi(x_j)$, e.g., RBF: $$K(x_i, x_j) = \exp(-\gamma \|x_i - x_j\|^2)$$
 
 **Geometry:**
 Support vectors define the margin; decision boundary is hyperplane in feature space.
@@ -146,7 +147,7 @@ Interpretation: SVM with RBF kernel handles non-linear data. PCA reduces dimensi
 - **Common Pitfalls**: Not scaling features. Overfitting with high C/low gamma. Choosing wrong kernel.
 - **Debugging Strategies**: Plot decision boundaries. Check support vectors. Use cross-validation for tuning.
 - **Parameter Selection**: Start with C=1, gamma='scale'. Use 'linear' for high-dim sparse data, 'rbf' otherwise.
-- **Advanced Optimization**: Computational complexity O(n²) for training, use libsvm for efficiency.
+- **Advanced Optimization**: Computational complexity $O(n^2)$ for training, use libsvm for efficiency.
 
 Remember: SVMs are powerful but require careful tuning - they're not "set and forget" models.
 

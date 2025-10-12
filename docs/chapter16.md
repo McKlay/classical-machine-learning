@@ -42,15 +42,15 @@ Consider a model with d hyperparameters, each taking values in continuous or dis
 
 The objective is to find:
 
-θ* = argmax_θ ∈ Ω  Performance(f(θ))
+$$\theta^* = \arg\max_{\theta \in \Omega} \text{Performance}(f(\theta))$$
 
-Where Performance is typically cross-validation score, and f(θ) is the model trained with hyperparameters θ.
+Where Performance is typically cross-validation score, and $f(\theta)$ is the model trained with hyperparameters $\theta$.
 
 ### Grid Search Complexity
 
-Grid search evaluates all combinations of parameter values. For d parameters with n_i possible values each, the total evaluations are:
+Grid search evaluates all combinations of parameter values. For d parameters with $n_i$ possible values each, the total evaluations are:
 
-∏_{i=1}^d n_i
+$$\prod_{i=1}^d n_i$$
 
 This exponential growth makes grid search impractical for large parameter spaces.
 
@@ -362,8 +362,8 @@ The examples demonstrate:
 **Algorithm-Specific Guidelines:**
 
 **SVM:**
-- C: [1e-3, 1e3] log scale
-- gamma: [1e-4, 1e-1] log scale for RBF kernel
+- C: $[10^{-3}, 10^3]$ log scale
+- gamma: $[10^{-4}, 10^{-1}]$ log scale for RBF kernel
 - Try both linear and RBF kernels
 
 **Random Forest:**

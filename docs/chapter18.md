@@ -32,23 +32,26 @@ This chapter explores how to move beyond the default 0.5 threshold to make more 
 
 ## Mathematical Development
 
-The decision threshold transforms probability estimates into binary classifications. For a binary classifier with probability output P(y=1|x), the prediction is:
+The decision threshold transforms probability estimates into binary classifications. For a binary classifier with probability output $P(y=1|x)$, the prediction is:
 
-ŷ = 1 if P(y=1|x) ≥ t, else 0
+$$\hat{y} = \begin{cases} 
+1 & \text{if } P(y=1|x) \geq t \\
+0 & \text{otherwise}
+\end{cases}$$
 
-Where t is the decision threshold (default t=0.5).
+Where $t$ is the decision threshold (default $t=0.5$).
 
 ### Cost-Sensitive Classification
 
-Different misclassification errors can have different costs. Let FP_cost be the cost of false positive, FN_cost the cost of false negative. The expected cost for a prediction is:
+Different misclassification errors can have different costs. Let $\text{FP}_{\text{cost}}$ be the cost of false positive, $\text{FN}_{\text{cost}}$ the cost of false negative. The expected cost for a prediction is:
 
-Cost = P(y=1|x) * FN_cost + (1 - P(y=1|x)) * FP_cost
+$$\text{Cost} = P(y=1|x) \cdot \text{FN}_{\text{cost}} + (1 - P(y=1|x)) \cdot \text{FP}_{\text{cost}}$$
 
 The optimal threshold minimizes expected cost:
 
-t* = argmin_t [P(y=1|x) * FN_cost + (1 - P(y=1|x)) * FP_cost]
+$$t^* = \arg\min_t [P(y=1|x) \cdot \text{FN}_{\text{cost}} + (1 - P(y=1|x)) \cdot \text{FP}_{\text{cost}}]$$
 
-For equal costs, this simplifies to t* = 0.5.
+For equal costs, this simplifies to $t^* = 0.5$.
 
 ### Threshold and Performance Metrics
 

@@ -64,13 +64,13 @@ Web sources: For entropy and Gini, see [https://en.wikipedia.org/wiki/Decision_t
 ## Implementation Guide
 
 ### DecisionTreeClassifier API
-Key parameters:
-- `criterion`: str, default='gini'. 'gini' or 'entropy' for split quality
-- `max_depth`: int, default=None. Maximum tree depth
-- `min_samples_split`: int or float, default=2. Minimum samples to split
-- `min_samples_leaf`: int or float, default=1. Minimum samples per leaf
-- `max_features`: int, float or str, default=None. Features to consider for splits
-- `random_state`: int, default=None. For reproducibility
+Key parameters:  
+- `criterion`: str, default='gini'. 'gini' or 'entropy' for split quality  
+- `max_depth`: int, default=None. Maximum tree depth  
+- `min_samples_split`: int or float, default=2. Minimum samples to split  
+- `min_samples_leaf`: int or float, default=1. Minimum samples per leaf 
+- `max_features`: int, float or str, default=None. Features to consider for splits  
+- `random_state`: int, default=None. For reproducibility  
 
 Methods: `fit`, `predict`, `predict_proba`, `score`, `feature_importances_`
 

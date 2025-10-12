@@ -25,7 +25,7 @@ This approach is computationally efficient and requires less training data than 
 
 ## Mathematical Development
 
-Naive Bayes classifiers are rooted in Bayes' theorem, which provides a way to update our beliefs about the probability of a hypothesis given new evidence. For classification, we want to find the class \( c \) that maximizes the posterior probability given the features \( \mathbf{x} = (x_1, x_2, \dots, x_d) \).
+Naive Bayes classifiers are rooted in Bayes' theorem, which provides a way to update our beliefs about the probability of a hypothesis given new evidence. For classification, we want to find the class $c$ that maximizes the posterior probability given the features $\mathbf{x} = (x_1, x_2, \dots, x_d)$.
 
 The fundamental equation is:
 
@@ -33,29 +33,23 @@ The fundamental equation is:
 P(c|\mathbf{x}) = \frac{P(\mathbf{x}|c) P(c)}{P(\mathbf{x})}
 \]
 
-Since \( P(\mathbf{x}) \) is the same for all classes, we can focus on maximizing \( P(\mathbf{x}|c) P(c) \). The "naive" assumption decomposes the likelihood:
+Since $P(\mathbf{x})$ is the same for all classes, we can focus on maximizing $P(\mathbf{x}|c) P(c)$. The "naive" assumption decomposes the likelihood:
 
-\[
-P(\mathbf{x}|c) = \prod_{i=1}^d P(x_i|c)
-\]
+$$P(\mathbf{x}|c) = \prod_{i=1}^d P(x_i|c)$$
 
 This assumes conditional independence of features given the class. For continuous features, we typically assume a Gaussian distribution:
 
-\[
-P(x_i|c) = \frac{1}{\sqrt{2\pi\sigma_c^2}} \exp\left(-\frac{(x_i - \mu_c)^2}{2\sigma_c^2}\right)
-\]
+$$P(x_i|c) = \frac{1}{\sqrt{2\pi\sigma_c^2}} \exp\left(-\frac{(x_i - \mu_c)^2}{2\sigma_c^2}\right)$$
 
-Where \( \mu_c \) and \( \sigma_c^2 \) are the mean and variance of feature \( i \) for class \( c \), estimated from the training data.
+Where $\mu_c$ and $\sigma_c^2$ are the mean and variance of feature $i$ for class $c$, estimated from the training data.
 
 For discrete features (like word counts in text), we use multinomial or Bernoulli distributions. The multinomial variant models word frequencies, while Bernoulli considers presence/absence.
 
 To handle zero probabilities (when a feature-class combination doesn't appear in training), we apply Laplace smoothing:
 
-\[
-P(x_i|c) = \frac{count(x_i, c) + \alpha}{count(c) + \alpha \cdot |V|}
-\]
+$$P(x_i|c) = \frac{\text{count}(x_i, c) + \alpha}{\text{count}(c) + \alpha \cdot |V|}$$
 
-Where \( \alpha \) is the smoothing parameter and \( |V| \) is the vocabulary size.
+Where $\alpha$ is the smoothing parameter and $|V|$ is the vocabulary size.
 
 Web sources for further reading:
 - [https://en.wikipedia.org/wiki/Naive_Bayes_classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)

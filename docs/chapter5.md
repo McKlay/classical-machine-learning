@@ -61,11 +61,11 @@ As dimensions increase, distances become uniform, making neighbors less meaningf
 ## Implementation Guide
 
 ### KNeighborsClassifier API
-Key parameters:
-- `n_neighbors`: int, default=5. Number of neighbors to use
-- `weights`: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)
-- `metric`: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')
-- `p`: int, default=2. Power parameter for Minkowski metric (p=2 is Euclidean)
+Key parameters:  
+- `n_neighbors`: int, default=5. Number of neighbors to use  
+- `weights`: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)  
+- `metric`: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')  
+- `p`: int, default=2. Power parameter for Minkowski metric (p=2 is Euclidean)  
 - `algorithm`: str, default='auto'. Algorithm for neighbor search ('auto', 'ball_tree', 'kd_tree', 'brute')
 
 Methods: `fit`, `predict`, `predict_proba`, `kneighbors`, `score`

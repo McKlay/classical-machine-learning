@@ -44,24 +44,24 @@ These methods are like drawing the best straight line through your data points. 
 **Sigmoid Function and Log-Odds:**
 The sigmoid function maps any real number to (0,1):
 
-σ(z) = 1 / (1 + e^(-z))
+$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 
-Where z = w·x + b is the linear combination of features.
+Where $z = w \cdot x + b$ is the linear combination of features.
 
 Log-odds represent the logarithm of the odds ratio:
 
-log(p/(1-p)) = w·x + b
+$$\log\left(\frac{p}{1-p}\right) = w \cdot x + b$$
 
-Solving for p gives the probability: p = σ(w·x + b)
+Solving for p gives the probability: $p = \sigma(w \cdot x + b)$
 
 **Decision Boundary:**
 For binary classification, predict class 1 if p > 0.5, else class 0.
 Geometrically, this creates a hyperplane separating classes in feature space.
 
 **Derivation:**
-Given data {(x_i, y_i)}, we maximize likelihood:
+Given data $\{(x_i, y_i)\}$, we maximize likelihood:
 
-L(w,b) = ∏ [σ(w·x_i + b)]^y_i * [1-σ(w·x_i + b)]^(1-y_i)
+$$L(w,b) = \prod_{i=1}^n [\sigma(w \cdot x_i + b)]^{y_i} \cdot [1-\sigma(w \cdot x_i + b)]^{(1-y_i)}$$
 
 Taking log and minimizing negative log-likelihood gives the loss function optimized by gradient descent.
 
@@ -70,14 +70,14 @@ Taking log and minimizing negative log-likelihood gives the loss function optimi
 **Least Squares:**
 Minimize the sum of squared residuals:
 
-min_w ||y - Xw||²
+$$\min_w \|y - Xw\|^2$$
 
 **Solution:**
-w = (X^T X)^(-1) X^T y
+$$w = (X^T X)^{-1} X^T y$$
 
-**Ridge and Lasso Regularization:**
-Ridge: min_w ||y - Xw||² + α||w||²
-Lasso: min_w ||y - Xw||² + α||w||₁
+**Ridge and Lasso Regularization:**  
+Ridge: $$\min_w \|y - Xw\|^2 + \alpha\|w\|^2$$  
+Lasso: $$\min_w \|y - Xw\|^2 + \alpha\|w\|_1$$
 
 Ridge shrinks coefficients, Lasso can set them to zero for feature selection.
 
@@ -86,24 +86,24 @@ Ridge shrinks coefficients, Lasso can set them to zero for feature selection.
 ## Implementation Guide
 
 ### LogisticRegression API
-Key parameters:
-- `C`: float, default=1.0. Inverse regularization strength (smaller = stronger regularization)
-- `penalty`: str, default='l2'. 'l1', 'l2', 'elasticnet', or 'none'
-- `solver`: str, default='lbfgs'. Optimization algorithm ('newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga')
-- `multi_class`: str, default='auto'. 'ovr' (one-vs-rest), 'multinomial', 'auto'
-- `max_iter`: int, default=100. Maximum iterations
+Key parameters:  
+- `C`: float, default=1.0. Inverse regularization strength (smaller = stronger regularization)  
+- `penalty`: str, default='l2'. 'l1', 'l2', 'elasticnet', or 'none'  
+- `solver`: str, default='lbfgs'. Optimization algorithm ('newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga')  
+- `multi_class`: str, default='auto'. 'ovr' (one-vs-rest), 'multinomial', 'auto'  
+- `max_iter`: int, default=100. Maximum iterations  
 
 Methods: `fit`, `predict`, `predict_proba`, `score`
 
 See: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 ### LinearRegression API
-Key parameters:
-- `fit_intercept`: bool, default=True. Whether to calculate intercept
+Key parameters:  
+- `fit_intercept`: bool, default=True. Whether to calculate intercept  
 - `normalize`: bool, default=False. Deprecated, use preprocessing
 
-For regularization, use `Ridge` or `Lasso`:
-- `alpha`: float, default=1.0. Regularization strength
+For regularization, use `Ridge` or `Lasso`:  
+- `alpha`: float, default=1.0. Regularization strength  
 - `solver`: str, default='auto'. Optimization method
 
 See: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)

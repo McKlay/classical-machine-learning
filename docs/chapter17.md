@@ -38,9 +38,9 @@ Probability calibration addresses the mismatch between predicted probabilities a
 
 Platt scaling fits a sigmoid function to the decision values or uncalibrated probabilities. The calibrated probability is:
 
-P(y=1|x) = 1 / (1 + exp(A * f(x) + B))
+$$P(y=1|x) = \frac{1}{1 + \exp(A \cdot f(x) + B)}$$
 
-Where f(x) is the decision function output, and A, B are learned parameters.
+Where $f(x)$ is the decision function output, and A, B are learned parameters.
 
 This is equivalent to logistic regression on the decision values.
 
