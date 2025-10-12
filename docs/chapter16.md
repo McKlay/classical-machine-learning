@@ -104,7 +104,7 @@ print(f"Best CV score: {grid_search.best_score_:.3f}")
 print(f"Best estimator: {grid_search.best_estimator_}")
 ```
 
-**Parameter Explanations:**
+**Parameter Explanations:**	
 
 - `param_grid`: Dictionary with parameter names as keys and lists of values to try
 - `cv`: Cross-validation folds (default=5)
@@ -141,7 +141,7 @@ print(f"Best parameters: {random_search.best_params_}")
 print(f"Best CV score: {random_search.best_score_:.3f}")
 ```
 
-**RandomizedSearchCV specific parameters:**
+**RandomizedSearchCV specific parameters:**	
 
 - `n_iter`: Number of parameter settings to sample
 - `param_distributions`: Distributions to sample from (can use scipy.stats)
@@ -326,7 +326,7 @@ plt.grid(True)
 plt.show()
 ```
 
-**Interpreting Results:**
+**Interpreting Results:**	
 
 The examples demonstrate:
 - Grid search systematically explores all parameter combinations
@@ -340,13 +340,13 @@ The examples demonstrate:
 
 ### Grid Search vs Random Search
 
-**When to use Grid Search:**
+**When to use Grid Search:**	
 - Small parameter spaces (≤10 parameters)
 - Understanding parameter interactions is crucial
 - Computational resources are abundant
 - Need exhaustive coverage of parameter combinations
 
-**When to use Random Search:**
+**When to use Random Search:**	
 - Large parameter spaces (>10 parameters)
 - Some parameters are more important than others
 - Limited computational budget
@@ -354,19 +354,19 @@ The examples demonstrate:
 
 ### Designing Effective Search Spaces
 
-**Parameter Scale Considerations:**
+**Parameter Scale Considerations:**	
 - Use log scale for parameters spanning orders of magnitude (C, gamma)
 - Consider parameter interactions (e.g., C and gamma in SVM are related)
 - Include boundary values and reasonable defaults
 
-**Algorithm-Specific Guidelines:**
+**Algorithm-Specific Guidelines:**	
 
-**SVM:**
+**SVM:**	
 - C: $[10^{-3}, 10^3]$ log scale
 - gamma: $[10^{-4}, 10^{-1}]$ log scale for RBF kernel
 - Try both linear and RBF kernels
 
-**Random Forest:**
+**Random Forest:**	
 - n_estimators: [50, 500] - more is usually better
 - max_depth: [None, 10, 20, 30] - None allows full growth
 - min_samples_split: [2, 10] - higher values prevent overfitting

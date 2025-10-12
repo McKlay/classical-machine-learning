@@ -115,7 +115,7 @@ model_manual.fit(X, y)
 print("Class weights:", class_weight_dict)
 ```
 
-**LogisticRegression class_weight parameter:**
+**LogisticRegression class_weight parameter:**	
 
 - `'balanced'`: Automatically computes weights inversely proportional to class frequencies
 - Dictionary: Manual weights for each class
@@ -147,7 +147,7 @@ model_smote = LogisticRegression(random_state=42)
 model_smote.fit(X_train_smote, y_train_smote)
 ```
 
-**SMOTE Parameters:**
+**SMOTE Parameters:**	
 
 - `k_neighbors=5`: Number of nearest neighbors to use for generating synthetic samples
 - `random_state`: For reproducible results
@@ -319,7 +319,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-**Interpreting Results:**
+**Interpreting Results:**	
 
 The example demonstrates:
 - Baseline model achieves high accuracy but poor fraud detection (low recall)
@@ -334,25 +334,25 @@ The example demonstrates:
 
 ### When to Use Each Technique
 
-**Class Weighting:**
+**Class Weighting:**	
 - Simple to implement, no data modification
 - Works with any algorithm that supports weights
 - Good for moderate imbalance
 - May not be sufficient for extreme imbalance
 
-**Oversampling (SMOTE):**
+**Oversampling (SMOTE):**	
 - Creates synthetic data, preserves information
 - Effective for small datasets
 - Can introduce noise if minority class has outliers
 - Computationally intensive for large datasets
 
-**Undersampling:**
+**Undersampling:**	
 - Reduces training time and memory
 - Good for very large majority classes
 - Risk of losing important information
 - May not work well with small minority classes
 
-**Combined Approaches:**
+**Combined Approaches:**	
 - SMOTE + Tomek: Oversample minority, remove noisy majority samples
 - SMOTE + ENN: Oversample minority, remove noisy samples from both classes
 

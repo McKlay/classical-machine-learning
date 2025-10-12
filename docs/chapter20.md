@@ -105,7 +105,7 @@ print(f"Explained variance ratio: {pca.explained_variance_ratio_}")
 print(f"Cumulative explained variance: {np.cumsum(pca.explained_variance_ratio_)}")
 ```
 
-**PCA Parameters:**
+**PCA Parameters:**	
 
 - `n_components=None` (default): Number of components to keep. If None, keeps all
 - `whiten=False` (default): Whether to whiten the components (make them have unit variance)

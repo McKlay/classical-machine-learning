@@ -71,7 +71,7 @@ rf = RandomForestClassifier(
 )
 ```
 
-Key parameters:
+Key parameters:	
 - `n_estimators`: More trees generally improve performance but increase computation time. Default 100 is often sufficient.
 - `max_features`: Controls feature randomization. 'sqrt' (default) works well for most cases.
 - `max_depth`: Limits tree depth to prevent overfitting. None allows full growth.

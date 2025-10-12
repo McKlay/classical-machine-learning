@@ -67,7 +67,7 @@ from sklearn.naive_bayes import GaussianNB
 # Initialize the classifier
 gnb = GaussianNB()
 
-# Key parameters:
+# Key parameters:	
 # - priors: array-like of shape (n_classes,), default=None
 #   Prior probabilities of the classes. If None, priors are inferred from data.
 # - var_smoothing: float, default=1e-9

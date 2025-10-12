@@ -91,7 +91,7 @@ probabilities = pipeline.predict_proba(X)
 print(f"Pipeline score: {pipeline.score(X, y):.3f}")
 ```
 
-**Pipeline Parameters:**
+**Pipeline Parameters:**	
 - `steps`: List of (name, transformer/estimator) tuples
 - `memory`: Cache fitted transformers (useful for large datasets)
 - `verbose`: Print progress information
@@ -167,7 +167,7 @@ predictions = full_pipeline.predict(X)
 print(f"Pipeline score: {full_pipeline.score(X, y):.3f}")
 ```
 
-**ColumnTransformer Parameters:**
+**ColumnTransformer Parameters:**	
 - `transformers`: List of (name, transformer, columns) tuples
 - `remainder`: What to do with unspecified columns ('drop', 'passthrough', or transformer)
 - `sparse_threshold`: Threshold for returning sparse matrices
@@ -225,7 +225,7 @@ custom_pipeline = Pipeline([
 ])
 ```
 
-**Custom Transformer Requirements:**
+**Custom Transformer Requirements:**	
 - Inherit from `BaseEstimator` and `TransformerMixin`
 - Implement `fit(X, y=None)` method
 - Implement `transform(X)` method
@@ -349,7 +349,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-**Key Insights from the Example:**
+**Key Insights from the Example:**	
 - ColumnTransformer handles mixed data types seamlessly
 - Pipeline ensures identical preprocessing for training and testing
 - Cross-validation provides robust performance estimates

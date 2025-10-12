@@ -176,7 +176,7 @@ pr_display = PrecisionRecallDisplay(precision=precision, recall=recall, average_
 pr_display.plot()
 ```
 
-**Key Parameters:**
+**Key Parameters:**	
 
 - `roc_curve(y_true, y_score)`: y_score should be prediction probabilities or confidence scores
 - `precision_recall_curve`: Similar requirements

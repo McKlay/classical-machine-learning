@@ -41,7 +41,7 @@ These methods are like drawing the best straight line through your data points. 
 
 ### Logistic Regression
 
-**Sigmoid Function and Log-Odds:**
+**Sigmoid Function and Log-Odds:**	
 The sigmoid function maps any real number to (0,1):
 
 $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
@@ -54,11 +54,11 @@ $$\log\left(\frac{p}{1-p}\right) = w \cdot x + b$$
 
 Solving for p gives the probability: $p = \sigma(w \cdot x + b)$
 
-**Decision Boundary:**
+**Decision Boundary:**	
 For binary classification, predict class 1 if p > 0.5, else class 0.
 Geometrically, this creates a hyperplane separating classes in feature space.
 
-**Derivation:**
+**Derivation:**	
 Given data $\{(x_i, y_i)\}$, we maximize likelihood:
 
 $$L(w,b) = \prod_{i=1}^n [\sigma(w \cdot x_i + b)]^{y_i} \cdot [1-\sigma(w \cdot x_i + b)]^{(1-y_i)}$$
@@ -67,15 +67,15 @@ Taking log and minimizing negative log-likelihood gives the loss function optimi
 
 ### Linear Regression
 
-**Least Squares:**
+**Least Squares:**	
 Minimize the sum of squared residuals:
 
 $$\min_w \|y - Xw\|^2$$
 
-**Solution:**
+**Solution:**	
 $$w = (X^T X)^{-1} X^T y$$
 
-**Ridge and Lasso Regularization:**  
+**Ridge and Lasso Regularization:**	
 Ridge: $$\min_w \|y - Xw\|^2 + \alpha\|w\|^2$$  
 Lasso: $$\min_w \|y - Xw\|^2 + \alpha\|w\|_1$$
 
@@ -86,7 +86,7 @@ Ridge shrinks coefficients, Lasso can set them to zero for feature selection.
 ## Implementation Guide
 
 ### LogisticRegression API
-Key parameters:  
+Key parameters:	
 - `C`: float, default=1.0. Inverse regularization strength (smaller = stronger regularization)  
 - `penalty`: str, default='l2'. 'l1', 'l2', 'elasticnet', or 'none'  
 - `solver`: str, default='lbfgs'. Optimization algorithm ('newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga')  
@@ -98,7 +98,7 @@ Methods: `fit`, `predict`, `predict_proba`, `score`
 See: [https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 ### LinearRegression API
-Key parameters:  
+Key parameters:	
 - `fit_intercept`: bool, default=True. Whether to calculate intercept  
 - `normalize`: bool, default=False. Deprecated, use preprocessing
 

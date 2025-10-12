@@ -39,21 +39,21 @@ This lazy learning approach doesn't build a model during training; it stores the
 
 ## Mathematical Development
 
-**Distance Metrics (Euclidean):**
+**Distance Metrics (Euclidean):**	
 KNN uses distance to find nearest neighbors. The most common is Euclidean distance:
 
 d(x, y) = sqrt(∑(x_i - y_i)²)
 
 For multi-dimensional data, this measures straight-line distance in feature space.
 
-**Voting in Feature Space:**
+**Voting in Feature Space:**	
 For classification: Find k nearest neighbors, predict the majority class.
 For regression: Predict the average of k nearest targets.
 
-**Geometry:**
+**Geometry:**	
 In 2D feature space, KNN creates irregular decision boundaries based on local densities. Voronoi diagrams illustrate how space is partitioned by nearest neighbors.
 
-**Curse of Dimensionality:**
+**Curse of Dimensionality:**	
 As dimensions increase, distances become uniform, making neighbors less meaningful. Performance degrades in high dimensions.
 
 ---
@@ -61,7 +61,7 @@ As dimensions increase, distances become uniform, making neighbors less meaningf
 ## Implementation Guide
 
 ### KNeighborsClassifier API
-Key parameters:  
+Key parameters:	
 - `n_neighbors`: int, default=5. Number of neighbors to use  
 - `weights`: str or callable, default='uniform'. 'uniform' (equal weights) or 'distance' (inverse distance weighting)  
 - `metric`: str or callable, default='minkowski'. Distance metric ('euclidean', 'manhattan', 'minkowski')  

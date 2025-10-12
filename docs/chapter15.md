@@ -165,7 +165,7 @@ print(f"Best parameters: {grid_search.best_params_}")
 print(f"Best cross-validation score: {grid_search.best_score_:.3f}")
 ```
 
-**Key Parameters for GridSearchCV:**
+**Key Parameters for GridSearchCV:**	
 
 - `cv`: Cross-validation strategy (default=5)
 - `scoring`: Evaluation metric

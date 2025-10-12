@@ -120,7 +120,7 @@ class ExampleEstimator(BaseEstimator):
         self.feature_names_in_ = getattr(X, 'columns', None)
 ```
 
-**Key Components of `fit`:**
+**Key Components of `fit`:**	
 
 - `_validate_data()`: Input validation and preprocessing
 - `_validate_params()`: Parameter validation
@@ -203,7 +203,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
         return X_scaled * self.scale_factor
 ```
 
-**Base Class Mixins:**
+**Base Class Mixins:**	
 
 - `BaseEstimator`: Provides `get_params()`, `set_params()`, `**repr**`
 - `ClassifierMixin`: Adds `score()` method for classification metrics
@@ -245,7 +245,7 @@ print(f"LinearRegression MRO: {LinearRegression.__mro__}")
 print(f"LinearRegression attributes: {[attr for attr in dir(LinearRegression) if not attr.startswith('_')]}")
 ```
 
-**Navigating the Source Code:**
+**Navigating the Source Code:**	
 
 ```python
 # Explore sklearn directory structure
@@ -424,7 +424,7 @@ sk_cv_results = cross_validate(sk_perceptron, X, y, cv=5, scoring='accuracy')
 print(f"SKlearn Perceptron CV Accuracy: {sk_cv_results['test_score'].mean():.3f} (+/- {sk_cv_results['test_score'].std() * 2:.3f})")
 ```
 
-**Key Insights:**
+**Key Insights:**	
 - Custom estimators integrate seamlessly with scikit-learn's ecosystem
 - Following the base class patterns ensures compatibility
 - Cross-validation and other tools work automatically

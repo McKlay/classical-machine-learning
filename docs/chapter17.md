@@ -85,7 +85,7 @@ probabilities = calibrated_svm.predict_proba(X)
 print(f"Calibrated probabilities shape: {probabilities.shape}")
 ```
 
-**Parameter Explanations:**
+**Parameter Explanations:**	
 
 - `base_estimator`: The uncalibrated classifier (must have decision_function or predict_proba)
 - `method`: 'sigmoid' (Platt scaling) or 'isotonic' (isotonic regression)

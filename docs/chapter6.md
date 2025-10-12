@@ -39,7 +39,7 @@ Decision trees work similarly, automatically learning these questions from data.
 
 ## Mathematical Development
 
-**Entropy and Gini Impurity:**
+**Entropy and Gini Impurity:**	
 For classification, trees use impurity measures to choose splits.
 
 Entropy: H(S) = -∑ p_i log₂ p_i
@@ -48,13 +48,13 @@ Gini: G(S) = 1 - ∑ p_i²
 
 Lower impurity means purer splits. Information gain = impurity before - weighted impurity after.
 
-**Recursive Splitting:**
+**Recursive Splitting:**	
 Start with root node. Choose feature and threshold that maximize information gain. Split data, repeat on children until stopping criteria (max depth, min samples).
 
-**Geometry:**
+**Geometry:**	
 In feature space, splits create axis-aligned rectangles. The tree partitions space into regions, each assigned a prediction.
 
-**Regression Trees:**
+**Regression Trees:**	
 Use variance reduction: Split minimizes weighted variance of targets in children.
 
 Web sources: For entropy and Gini, see [https://en.wikipedia.org/wiki/Decision_tree_learning](https://en.wikipedia.org/wiki/Decision_tree_learning). For implementation details, [https://scikit-learn.org/stable/modules/tree.html](https://scikit-learn.org/stable/modules/tree.html).
@@ -64,7 +64,7 @@ Web sources: For entropy and Gini, see [https://en.wikipedia.org/wiki/Decision_t
 ## Implementation Guide
 
 ### DecisionTreeClassifier API
-Key parameters:  
+Key parameters:	
 - `criterion`: str, default='gini'. 'gini' or 'entropy' for split quality  
 - `max_depth`: int, default=None. Maximum tree depth  
 - `min_samples_split`: int or float, default=2. Minimum samples to split  

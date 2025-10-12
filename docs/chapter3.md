@@ -95,7 +95,7 @@ Under the hood, `DummyClassifier` inherits from `BaseEstimator` and implements `
 Dummy classifiers in scikit-learn provide non-learning baselines. Here's comprehensive API coverage:
 
 ### DummyClassifier API
-Key parameters:
+Key parameters:	
 - `strategy`: str, default='prior'. Strategy for predictions.
   - 'most_frequent': Predict most frequent class (default for classification).
   - 'prior': Same as most_frequent.

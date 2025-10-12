@@ -101,7 +101,7 @@ print("Cluster labels:", labels)
 # Output: [ 0  0  0  1  1 -1]  # -1 indicates noise
 ```
 
-**Key Parameters:**
+**Key Parameters:**	
 
 - `eps`: Maximum distance between two samples for them to be considered neighbors
   - Default: 0.5
@@ -144,7 +144,7 @@ print(f"Number of clusters: {n_clusters}")
 print(f"Number of noise points: {n_noise}")
 ```
 
-**Parameter Interactions:**
+**Parameter Interactions:**	
 
 - `eps` and `min_samples` work together: smaller `eps` requires smaller `min_samples`
 - For high-dimensional data, consider larger `eps` values
@@ -310,7 +310,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-**Interpreting Results:**
+**Interpreting Results:**	
 
 The analysis demonstrates DBSCAN's strengths:
 - **Blobs with noise**: Successfully identifies 4 clusters while marking noise points
@@ -325,13 +325,13 @@ The visualization reveals how DBSCAN naturally handles different cluster shapes 
 
 ### Choosing Parameters
 
-**eps Selection:**
+**eps Selection:**	
 - Use k-distance plot: Plot distance to k-th nearest neighbor, look for "knee"
 - Rule of thumb: Start with eps = 0.1 to 0.5 for normalized data
 - Larger eps → fewer, larger clusters
 - Smaller eps → more clusters, more noise
 
-**min_samples Selection:**
+**min_samples Selection:**	
 - General rule: min_samples ≥ dimensionality + 1
 - For 2D data: min_samples = 4-5
 - For higher dimensions: min_samples = 2 * dimensionality
@@ -339,14 +339,14 @@ The visualization reveals how DBSCAN naturally handles different cluster shapes 
 
 ### Advantages of DBSCAN
 
-**Strengths:**
+**Strengths:**	
 - No need to specify number of clusters (unlike K-means)
 - Handles arbitrary-shaped clusters
 - Robust to outliers and noise
 - Automatically identifies noise points
 - Deterministic results (no random initialization)
 
-**Limitations:**
+**Limitations:**	
 - Struggles with varying densities
 - Parameter selection can be tricky
 - Not suitable for high-dimensional data
@@ -354,13 +354,13 @@ The visualization reveals how DBSCAN naturally handles different cluster shapes 
 
 ### When to Use DBSCAN
 
-**Ideal for:**
+**Ideal for:**	
 - Clusters of arbitrary shapes
 - Datasets with noise/outliers
 - Unknown number of clusters
 - Spatial data (geographic clustering)
 
-**Avoid when:**
+**Avoid when:**	
 - Clusters have significantly different densities
 - High-dimensional data (>10-15 dimensions)
 - Need deterministic cluster assignment for all points
@@ -368,12 +368,12 @@ The visualization reveals how DBSCAN naturally handles different cluster shapes 
 
 ### Performance Considerations
 
-**Complexity:**
+**Complexity:**	
 - Average case: O(n log n) with spatial indexing
 - Worst case: O(n²) without proper indexing
 - Memory usage: O(n) for storing distance matrix
 
-**Scalability:**
+**Scalability:**	
 - Works well for datasets up to 10,000-100,000 points
 - For larger datasets, consider HDBSCAN or sampling
 - Use `algorithm='ball_tree'` or `algorithm='kd_tree'` for better performance

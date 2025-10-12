@@ -107,7 +107,7 @@ print(f"\nMean: {X_scaled.mean(axis=0)}")
 print(f"Std: {X_scaled.std(axis=0)}")
 ```
 
-**StandardScaler Parameters:**
+**StandardScaler Parameters:**	
 
 - `with_mean=True` (default): Centers data by subtracting mean. Set to False for sparse matrices
 - `with_std=True` (default): Scales data by dividing by standard deviation. Set to False to only center

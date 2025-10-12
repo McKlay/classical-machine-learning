@@ -39,17 +39,18 @@ For non-linear data, SVM uses kernels to map points to higher dimensions where s
 
 ## Mathematical Development
 
-**Margin Maximization:**
-For linearly separable data, SVM maximizes the margin: $$\frac{2}{\|w\|}$$, subject to $$y_i(w \cdot x_i + b) \geq 1$$.
+**Margin Maximization:**	
+For linearly separable data, SVM maximizes the margin: 
+$$\frac{2}{\|w\|}$$, subject to $$y_i(w \cdot x_i + b) \geq 1$$.
 
-**Dual Formulation:**
+**Dual Formulation:**	
 Using Lagrange multipliers $\alpha_i$, the problem becomes:
 $$\max \sum_{i=1}^n \alpha_i - \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n \alpha_i \alpha_j y_i y_j (x_i \cdot x_j)$$
 
-**Kernels:**
+**Kernels:**	
 For non-linear, use kernel $K(x_i, x_j) = \phi(x_i) \cdot \phi(x_j)$, e.g., RBF: $$K(x_i, x_j) = \exp(-\gamma \|x_i - x_j\|^2)$$
 
-**Geometry:**
+**Geometry:**	
 Support vectors define the margin; decision boundary is hyperplane in feature space.
 
 Web sources: For SVM theory, see [https://en.wikipedia.org/wiki/Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine). For kernels, [https://scikit-learn.org/stable/modules/svm.html](https://scikit-learn.org/stable/modules/svm.html).
@@ -59,12 +60,12 @@ Web sources: For SVM theory, see [https://en.wikipedia.org/wiki/Support_vector_m
 ## Implementation Guide
 
 ### SVC API
-Key parameters:
-- `C`: float, default=1.0. Regularization parameter (higher = less regularization)
-- `kernel`: str, default='rbf'. 'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'
-- `gamma`: str or float, default='scale'. Kernel coefficient for 'rbf', 'poly', 'sigmoid'
-- `degree`: int, default=3. Degree for 'poly' kernel
-- `coef0`: float, default=0.0. Independent term for 'poly' and 'sigmoid'
+Key parameters:  
+- `C`: float, default=1.0. Regularization parameter (higher = less regularization)  
+- `kernel`: str, default='rbf'. 'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'  
+- `gamma`: str or float, default='scale'. Kernel coefficient for 'rbf', 'poly', 'sigmoid'  
+- `degree`: int, default=3. Degree for 'poly' kernel  
+- `coef0`: float, default=0.0. Independent term for 'poly' and 'sigmoid'  
 
 Methods: `fit`, `predict`, `predict_proba`, `decision_function`, `support_vectors_`
 

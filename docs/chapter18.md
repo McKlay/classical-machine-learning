@@ -55,7 +55,7 @@ For equal costs, this simplifies to $t^* = 0.5$.
 
 ### Threshold and Performance Metrics
 
-**Precision-Recall Trade-off:**
+**Precision-Recall Trade-off:**	
 
 Precision = TP / (TP + FP)
 
