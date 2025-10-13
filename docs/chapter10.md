@@ -54,7 +54,7 @@ For classification, we use loss functions like logistic loss, and the gradients 
 HistGradientBoostingClassifier uses histogram binning to speed up training: features are discretized into bins, allowing efficient computation of split candidates.
 
 Web sources for further reading:
-- https://en.wikipedia.org/wiki/Gradient_boosting
+- [https://en.wikipedia.org/wiki/Gradient_boosting](https://en.wikipedia.org/wiki/Gradient_boosting)
 - https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting
 
 ## Implementation Guide
