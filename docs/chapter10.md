@@ -55,7 +55,7 @@ HistGradientBoostingClassifier uses histogram binning to speed up training: feat
 
 Web sources for further reading:
 - [https://en.wikipedia.org/wiki/Gradient_boosting](https://en.wikipedia.org/wiki/Gradient_boosting)
-- https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting
+- [https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting](https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting)
 
 ## Implementation Guide
 
