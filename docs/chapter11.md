@@ -70,7 +70,7 @@ The algorithm converges when the centroids stabilize. In practice, we stop when:
 - No points change cluster assignment
 
 For web sources on K-means mathematics:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/clustering.html#k-means
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/clustering.html#k-means](https://scikit-learn.org/stable/modules/clustering.html#k-means)
 - Original paper: "k-means++: The advantages of careful seeding" by Arthur and Vassilvitskii
 
 ---
