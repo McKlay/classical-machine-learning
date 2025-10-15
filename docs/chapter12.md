@@ -73,7 +73,7 @@ A dendrogram is a tree diagram showing the hierarchical relationships:
 The y-axis represents the linkage distance, helping determine where to "cut" the tree for optimal clustering.
 
 For web sources on hierarchical clustering:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering](https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering)
 - Wikipedia: Hierarchical clustering algorithms
 
 ---
