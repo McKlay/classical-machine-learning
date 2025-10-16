@@ -75,7 +75,7 @@ A **cluster** is a set of density-connected points that is maximal (not containe
 - **Noise points**: Points that are neither core nor border points
 
 For web sources on DBSCAN:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/clustering.html#dbscan
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/clustering.html#dbscan](https://scikit-learn.org/stable/modules/clustering.html#dbscan)
 - Original DBSCAN paper: Ester et al. (1996)
 
 ---
