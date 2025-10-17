@@ -91,7 +91,7 @@ The **Area Under the ROC Curve (AUC-ROC)** summarizes the ROC curve's performanc
 **Precision-Recall (PR) Curve** plots precision against recall at different thresholds. The **Area Under the PR Curve (AUC-PR)** provides a summary measure, particularly useful for imbalanced datasets.
 
 For web sources on these metrics, see:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/model_evaluation.html
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/model_evaluation.html](https://scikit-learn.org/stable/modules/model_evaluation.html)
 - Wikipedia articles on precision and recall, ROC curves
 
 ---
