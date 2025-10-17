@@ -65,7 +65,7 @@ $$\text{LOOCV Score} = \frac{1}{N} \sum_{i=1}^{N} \text{Score}_{-i}$$
 Where Score_{-i} is the score when sample i is left out for validation.
 
 For web sources on cross-validation theory, see:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/cross_validation.html
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/cross_validation.html](https://scikit-learn.org/stable/modules/cross_validation.html)
 - Elements of Statistical Learning (Hastie et al.)
 
 ---
