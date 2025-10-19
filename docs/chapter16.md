@@ -59,7 +59,7 @@ This exponential growth makes grid search impractical for large parameter spaces
 Random search samples randomly from the parameter space. Bergstra and Bengio (2012) showed that random search often outperforms grid search, especially when some parameters are more important than others.
 
 For web sources on hyperparameter optimization:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/grid_search.html
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/grid_search.html](https://scikit-learn.org/stable/modules/grid_search.html)
 - "Random Search for Hyper-Parameter Optimization" (Bergstra and Bengio, 2012)
 
 ---
