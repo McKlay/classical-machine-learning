@@ -53,7 +53,7 @@ g(f(x)) ≈ P(y=1|f(x))
 Subject to g being non-decreasing.
 
 For web sources on probability calibration:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/calibration.html
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/calibration.html](https://scikit-learn.org/stable/modules/calibration.html)
 - "Predicting Good Probabilities With Supervised Learning" (Platt, 1999)
 
 ---
