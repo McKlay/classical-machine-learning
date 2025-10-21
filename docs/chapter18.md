@@ -69,7 +69,7 @@ As threshold increases:
 - F1 has a maximum at some optimal threshold
 
 For web sources on threshold selection:
-- Scikit-learn documentation: https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics
+- Scikit-learn documentation: [https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics)
 - "The Relationship Between Precision-Recall and ROC Curves" (Davis and Goadrich, 2006)
 
 ---
