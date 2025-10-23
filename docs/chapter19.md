@@ -70,7 +70,7 @@ $$x' = a + \frac{(x - x_{\min})(b - a)}{x_{\max} - x_{\min}}$$
 - **Min-Max Scaling**: Useful when preserving zero values is important, or when using algorithms requiring bounded inputs (neural networks with sigmoid activation)
 
 For web sources on feature scaling:
-- Scikit-learn preprocessing documentation: https://scikit-learn.org/stable/modules/preprocessing.html
+- Scikit-learn preprocessing documentation: [https://scikit-learn.org/stable/modules/preprocessing.html](https://scikit-learn.org/stable/modules/preprocessing.html)
 - "Feature Engineering and Selection" by Guyon and Elisseeff
 
 ---
