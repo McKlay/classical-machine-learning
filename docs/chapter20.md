@@ -74,7 +74,7 @@ $$\frac{\lambda_k}{\sum_{i=1}^p \lambda_i}$$
 The cumulative explained variance helps determine how many components to retain.
 
 For web sources on PCA mathematics:
-- Scikit-learn PCA documentation: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+- Scikit-learn PCA documentation: [https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
 - "Pattern Recognition and Machine Learning" (Bishop) - Chapter 12
 
 ---
