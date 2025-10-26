@@ -81,7 +81,7 @@ $$\mathcal{L}_{\text{weighted}} = w_p \sum_{i \in P} \ell(f(x_i)) + w_n \sum_{i 
 Where $w_p$ and $w_n$ are weights for positive and negative classes.
 
 For web sources on imbalanced learning:
-- Scikit-learn imbalanced-learn documentation: https://imbalanced-learn.org/stable/
+- Scikit-learn imbalanced-learn documentation: [https://imbalanced-learn.org/stable/](https://imbalanced-learn.org/stable/)
 - "Learning from Imbalanced Data" by He and Garcia
 
 ---
