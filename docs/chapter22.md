@@ -54,7 +54,7 @@ Mathematically, if we have preprocessing functions f₁, f₂, ..., fₖ and mod
 This ensures identical transformations for training and inference, preventing the common mistake of applying different preprocessing to new data.
 
 For web sources on pipeline design patterns:
-- Scikit-learn Pipeline documentation: https://scikit-learn.org/stable/modules/compose.html
+- Scikit-learn Pipeline documentation: [https://scikit-learn.org/stable/modules/compose.html](https://scikit-learn.org/stable/modules/compose.html)
 - ML Engineering best practices (Google, Microsoft)
 
 ---
