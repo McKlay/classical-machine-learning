@@ -56,7 +56,7 @@ Different algorithms implement this optimization differently:
 
 For web sources on scikit-learn architecture:
 - Scikit-learn contributor documentation: https://scikit-learn.org/stable/developers/
-- Base classes source: https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/base.py
+- Base classes source: [https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/base.py](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/base.py)
 
 ---
 
